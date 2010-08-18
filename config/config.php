@@ -3,7 +3,7 @@
  *      config.php
  *      
  */
-
+/*
 define('DB_NAME', '');    // The name of the data
 define('DB_USER', '');     //  MySQL username
 define('DB_PASSWORD', ''); // ...and password
@@ -11,7 +11,9 @@ define('DB_HOST', '');    //Db server
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', 'utf8');
 define ('LANG', 'he_IL');  //For localization and translation
+*/
 
+require_once(private.php);
 // 	Requires Section - all the included files should be included here
 //	use require_once(ABSPATH.'filename'); 
 
