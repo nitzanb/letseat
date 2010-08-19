@@ -1,0 +1,26 @@
+@import "reset.css";
+
+
+html {direction:rtl;text-align:right;}
+body {
+	font-size: 14px;
+	font-family:arial;
+	background:#b3141a;
+}
+
+#wrapper{width:960px; margin:10px auto;}
+#header {padding:20px 550px 0 0; background:url(../images/header.png) no-repeat; height:220px;}
+
+#header h1 {font-size:25px}
+#header div.slogen {margin-top:20px; font-size:20px}
+
+#topnav {height:30px; background:#ffffff; line-height:30px;}
+
+#topnav ul li {float:right; margin:0 10px;}
+#topnav ul li a {text-decoration:none; color:#b3141a; font-weight:bold;}
+#topnav ul li a:hover{ color:#000000;} 
+#topnav ul li.active a {color:#000000;} 
+#topnav ul li.active a:hover {color:#b3141a;} 
+
+#wrap {background:url(../images/Wood.jpg)}
+#widecb {width:940px; margin:10px 10px 0 0; background:#ffffff;}
