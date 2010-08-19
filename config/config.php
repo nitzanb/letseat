@@ -13,7 +13,7 @@ define('DB_COLLATE', 'utf8');
 define ('LANG', 'he_IL');  //For localization and translation
 */
 
-require_once(private.php);
+require_once(ABSPATH.'config/private.php');
 // 	Requires Section - all the included files should be included here
 //	use require_once(ABSPATH.'filename'); 
 

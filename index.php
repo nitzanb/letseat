@@ -11,42 +11,52 @@ if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
 require_once(ABSPATH.'config/config.php');
 
+
+
 /*
- * 	Are there any variables? GET or POST? we need to store theme
+ * 	Are there any variables? 
+ * 	GET or POST? 
+ * 	Do we use .htaccess file
+ * 	we need to store theme
  */
 
 	$sitemap = array();
-	if (isset($_GET['item']))
-		$sitemap['location']= array('item'=> $_GET['item']);
+	$url = $_SERVER[ 'REQUEST_URI'  ];
+	$url = trim($url, '/');
+	$location = explode('/', $url);	
+	if ($location[0]=='')
+		$sitemap['location']='home';
+	else
+		$sitemap['location']=$location[0];
+	
+	if(isset($location[1]))
+			$sitemap['page'] = $location[1];
+			
+	if(isset($location[2]))
+			$sitemap['page'] = $location[1];
+			
+
+	
+	
+	
+	
+	
 
 
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<?php 
+	get_header(); //Call the header
+	get_top_nav(); //Call the navigation
+	
+	get_content(); //Call the content
+?>
 
-<head>
-	<title><?php echo nicePageTitle() ;?></title>
-	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-	<meta name="generator" content="Geany 0.16" />
-</head>
-
-<body>
-<div id="header">
-	get_header();
-</div>
-<div id="topnav">
-	get_top_nav();
-</div>
-<div id="content">
-	get_content();
-</div>
 <div id="footer">
 (c)2010 ync
-
 </div>
 
+</div><!-- end wrapper"-->
 </body>
 </html>
 
