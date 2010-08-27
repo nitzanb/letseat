@@ -5,7 +5,7 @@
  *      Copyright 2010 Nitzan <nitzan@n2b.org> & Yura <yura@gmail.com>
  *      
  */
-
+session_start(); 
 //We start by loading the config file
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');

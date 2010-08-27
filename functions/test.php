@@ -1,6 +1,6 @@
 <?php
 /*
- *      main.php
+ *      test.php
  *      
  *      Copyright 2010 nitzan <nitzan@nitzan-laptop>
  *      
@@ -19,20 +19,11 @@
  *      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
  *      MA 02110-1301, USA.
  */
+
+session_start();
+
+//$_SESSION['cart'] = "he";
+print_r($_SESSION['cart']);
 ?>
 
-<div id="wrap">
-	<div id="widecb" style="direction:ltr;text-align:left;">
-		<?
-/*session_destroy();
 
-addToCart(7, 3, 'no coke1');
-addToCart(7, 5, 'no coke1');
-addToCart(7, 3, 'no coke2');
-print_r($_SESSION['cart']);*/
-addToCart(8, 5, '');
-echo howManyItemsDoIHave();
-?>
-	
-	</div>
-</div>

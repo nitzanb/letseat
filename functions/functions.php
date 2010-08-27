@@ -5,6 +5,8 @@
  * 		This file contains sevral function for daily use.
  */
 
+//We load the cart module
+require_once(ABSPATH.'functions/cart.php');
 
 function nicePageTitle(){
 	$title = "Burgeranch";
@@ -34,7 +36,7 @@ function get_content(){
 			echo "menu";
 			break;
 		case 'account':
-			include (ABSPATH.'theme/acount.php');
+			//include (ABSPATH.'theme/acount.php');
 			break;
 		default:
 			include (ABSPATH.'theme/main.php');
@@ -55,3 +57,5 @@ function __($string){
 function _e($string){
 	echo $string;
 	}
+	
+	

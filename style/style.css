@@ -22,5 +22,5 @@ body {
 #topnav ul li.active a {color:#000000;} 
 #topnav ul li.active a:hover {color:#b3141a;} 
 
-#wrap {background:url(../images/Wood.jpg)}
-#widecb {width:940px; margin:10px 10px 0 0; background:#ffffff;}
+#wrap {background:url(../images/Wood.jpg); padding:10px;}
+#widecb {width:940px;  background:#ffffff;}
