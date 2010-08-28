@@ -19,14 +19,23 @@
  *      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
  *      MA 02110-1301, USA.
  */
+global $sitemap;
+
 ?>
 
 <div id="topnav">
 	<ul id="navbar">
-		<li class="active"><a href="<? echo HOME ;?>" title="<?_e('Main Page');?>"><?_e('Main Page');?></a></li>
-		<li class=""><a href="<? echo HOME ;?>account" title="<?_e('My account');?>"><?_e('My account');?></a></li>
-		<li class=""><a href="<? echo HOME ;?>menu" title="<?_e('Menu');?>"><?_e('Menu');?></a></li>
-	
+		<li class="<? echo ($sitemap['location']=='home') ? "active" : ""; ?>"><a href="<? echo HOME ;?>" title="<?_e('Main Page');?>"><?_e('Main Page');?></a></li>
+		<li class="<? echo ($sitemap['location']=='account') ? "active" : ""; ?>"><a href="<? echo HOME ;?>account" title="<?_e('My account');?>"><?_e('My account');?></a></li>
+		<li class="<? echo ($sitemap['location']=='menu') ? "active" : ""; ?>"><a href="<? echo HOME ;?>menu" title="<?_e('Menu');?>"><?_e('Menu');?></a></li>
+		<?php
+			if($_SESSION['user']->ulevel == ADMIN_LEVEL){?>
+				
+				<li class="<? echo ($sitemap['location']=='additem') ? "active" : ""; ?>"><a href="<? echo HOME ;?>additem" title="<?_e('Add new Item');?>"><?_e('Add new Item');?></a></li>
+				<li class="<? echo ($sitemap['location']=='listitems') ? "active" : ""; ?>"><a href="<? echo HOME ;?>listitems" title="<?_e('Manage Items');?>"><?_e('Manage Items');?></a></li>
+			<?}
+		
+		?>
 	</ul>
 	
 	

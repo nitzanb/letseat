@@ -24,3 +24,24 @@ body {
 
 #wrap {background:url(../images/Wood.jpg); padding:10px;}
 #widecb {width:940px;  background:#ffffff;}
+
+/*#widecb{direction:ltr;text-align:left;}*/
+
+#formblock {float:right;padding:20px 20px 20px 0;width:450px;}
+#formblock h2 {font-size: 20px; color: #B3141A; margin-bottom:20px}
+#formblock ul li { margin-bottom:10px;}
+
+.choice {margin:0 0 0 30px;}
+
+
+#additemnav {float:right; width:250px;padding:10px 20px 20px 0;}
+#additemnav ul li {margin:10px 0; border:1px solid #B3141A; text-align:center;padding:5px; background:#B3141A;}
+#additemnav ul li:hover{background:#000000; }
+#additemnav ul li.selected {background:#000000; }
+#additemnav ul li.selected:hover {background:#B3141A; }
+#additemnav ul li a {text-decoration:none; color:#FFFFFF; font-weight:bold;}
+
+#formErrors {font-size:11px; color:#ff0000; text-align:center; margin-bottom:10px;}
+#loginformblock {width:230px; margin:0px auto; padding-top:20px;}
+#loginformblock table{margin-bottom:20px;}
+#loginformblock table td {padding:5px 0;}

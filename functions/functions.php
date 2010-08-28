@@ -59,3 +59,8 @@ function _e($string){
 	}
 	
 	
+function isAllowedExtension($file) {
+	  $allowed_extensions = array('jpg','png','gif');
+	  $file = strtolower($file);
+	  return in_array(end(explode(".", $file)), $allowed_extensions);
+	}

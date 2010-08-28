@@ -28,7 +28,8 @@
 	else {
 		$count = 0;
 		foreach($cart as $items)
-			print_r($items);
+			foreach($items as $item)
+					$count +=  $item[0];
 
 		 
 		 return sprintf  ( __('You have %s items in your shopping cart'), $count );
@@ -67,3 +68,49 @@ function removeFromCart($itemId, $pos=0){
 	if(isset($_SESSION['cart'][$itemId][$pos]))
 		unset($_SESSION['cart'][$itemId][$pos]);
 }
+
+
+function listRows(){
+	$cart = $_SESSION['cart'];
+	 if (!isset($cart)) {
+		 return __('You have no items in your shopping cart');
+	 	} 
+	else {
+		$count = 0;
+		$table = '<table id="cartlist">
+					<thead>
+						<tr>
+							<th>'.__('Item Name').'</th>
+							<th>'.__('Notes').'</th>
+							<th>'.__('Amount').'</th>
+							<th>'.__('Total').'</th>	
+							<th>'.__('update').'</th>
+						</tr>
+					</thead> 
+					<tbody>';
+		foreach($cart as $items => $value){
+			$itemname = getItemName( $items);
+			foreach($value as $item){
+				$table .= '<tr><td>'.$itemname.'</td>';
+				$table .= '<td>'.$item[1].'</td>';
+				$table .= '<td>'.$item[0].'</td>';
+				$table .= '<td>'.getItemTotal($items, $item[0]).'</td>';
+				$table .= '<td>'.'nothing for now'.'</td></tr>';				
+				
+	 		}
+		 $table .= "</tbody></table>";
+		 }}
+		 
+		 return $table;
+	
+}
+
+function getItemName($iid){
+	return "this is an item- - " . $iid;
+}
+
+function getItemTotal($iid, $amount){
+	return 10*$amount;
+	
+}
+

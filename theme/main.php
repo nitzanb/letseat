@@ -22,17 +22,13 @@
 ?>
 
 <div id="wrap">
-	<div id="widecb" style="direction:ltr;text-align:left;">
-		<?
-/*session_destroy();
+	<div id="widecb">
+		<?/*
+	$item = new Item();
+	$item->populatItem(4);
+	print_r($item);
+*/
 
-addToCart(7, 3, 'no coke1');
-addToCart(7, 5, 'no coke1');
-addToCart(7, 3, 'no coke2');
-print_r($_SESSION['cart']);*/
-addToCart(8, 5, '');
-echo howManyItemsDoIHave();
 ?>
-	
 	</div>
 </div>

@@ -5,14 +5,12 @@
  *      Copyright 2010 Nitzan <nitzan@n2b.org> & Yura <yura@gmail.com>
  *      
  */
-session_start(); 
+
 //We start by loading the config file
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
 require_once(ABSPATH.'config/config.php');
-
-
-
+session_start(); 
 /*
  * 	Are there any variables? 
  * 	GET or POST? 
@@ -23,6 +21,7 @@ require_once(ABSPATH.'config/config.php');
 	$sitemap = array();
 	$url = $_SERVER[ 'REQUEST_URI'  ];
 	$url = trim($url, '/');
+	
 	$location = explode('/', $url);	
 	if ($location[0]=='')
 		$sitemap['location']='home';
@@ -30,26 +29,23 @@ require_once(ABSPATH.'config/config.php');
 		$sitemap['location']=$location[0];
 	
 	if(isset($location[1]))
-			$sitemap['page'] = $location[1];
-			
-	if(isset($location[2]))
-			$sitemap['page'] = $location[1];
-			
+			$sitemap['action'] = $location[1];
 
-	
-	
-	
-	
-	
-
-
-?>
-
-<?php 
+if ($sitemap['action'] =='logout'){
+		session_destroy();
+		session_start();
+	}
 	get_header(); //Call the header
 	get_top_nav(); //Call the navigation
 	
-	get_content(); //Call the content
+	
+		
+	if($sitemap['location']!='home'){
+		$path = ABSPATH.'theme/'.$sitemap['location'].'.php';
+		require_once($path);
+	}
+		
+	
 ?>
 
 <div id="footer">

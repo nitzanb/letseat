@@ -6,3 +6,5 @@
  */
 
 
+require_once('User.php');
+require_once('Item.php');
