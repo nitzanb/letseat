@@ -42,9 +42,20 @@ if(isset($_POST['sublogin'])){
 	 */ 
 	if(isset($_SESSION['user'])){?>
 	
+		
+				<div id="additemnav">
+			<ul>
+				<li><a href="" title=""><?_e('Orders history');?></a></li>
+				<li><a href="" title=""><?_e('Add Address');?></a></li>
+				<li><a href="" title=""><?_e('Edit details');?></a></li>
+			
+			</ul>
+		</div>
+		<div id="formblock">
 		<div id="welcomenote">
 			<? echo __('Hello ').$_SESSION['user']->realname ; ?>
 			<a href="<? echo $_SERVER['REQUEST_URI'];?>/logout">[<?_e('Logout');?>]</a>
+		</div>
 		</div>
 <?		
 	}

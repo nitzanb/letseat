@@ -115,4 +115,27 @@ class Item{
 			return addNewItem( $itemcode, $itemname, $itemtype, $prices, $pricem, $pricel, $image, $itemsettings);		
 	}
 	
+	public function __toString(){
+		
+		$string =  '<div class="item_wrapper" id="item-'.$this->itemid.'">';
+		$string .= '<img class="itemimage" src='.HOME.'images/items/'.$this->image.' alt = '.$this->itemname.' />';
+		$string .='<div class = "item_info">';
+		$string .= '<h3><a href="'.HOME.'item/'.$this->itemid.'" title="'. __('Order').'">'.$this->itemname.'</a></h3>';
+		$string .= '<div class="item_price"><table>';
+		switch ($this->itemtype){
+			case 1:
+				$string .= sprintf(__('<tr><td class="desc">330cc can</td><td> %s </td></tr><tr><td class="price"> 500cc bottle</td><td> %s</td></tr>'),$this->prices, $this->pricem);
+			
+			
+			
+		}
+		
+		$string .= '</table></div>';
+		
+		$string .= '</div></div>';
+		return $string;
+		
+		
+	}
+	
 }

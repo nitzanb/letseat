@@ -24,7 +24,7 @@ session_start();
 	
 	$location = explode('/', $url);	
 	if ($location[0]=='')
-		$sitemap['location']='home';
+		$sitemap['location']='main';
 	else
 		$sitemap['location']=$location[0];
 	
@@ -44,6 +44,7 @@ if ($sitemap['action'] =='logout'){
 		$path = ABSPATH.'theme/'.$sitemap['location'].'.php';
 		require_once($path);
 	}
+
 		
 	
 ?>

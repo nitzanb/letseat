@@ -31,7 +31,13 @@ body {
 #formblock h2 {font-size: 20px; color: #B3141A; margin-bottom:20px}
 #formblock ul li { margin-bottom:10px;}
 
+#menuitemlist {float:right;padding:20px 20px 20px 0;}
+#menuitemlist h3 {font-size: 20px; color: #B3141A; margin-bottom:20px}
+.item_price {margin-top:20px;}
 .choice {margin:0 0 0 30px;}
+
+#menuitemlist td.desc {width:220px;}
+#menuitemlist td.price {width:50px;}
 
 
 #additemnav {float:right; width:250px;padding:10px 20px 20px 0;}
@@ -45,3 +51,10 @@ body {
 #loginformblock {width:230px; margin:0px auto; padding-top:20px;}
 #loginformblock table{margin-bottom:20px;}
 #loginformblock table td {padding:5px 0;}
+
+#content p {margin-bottom:5px;}
+#content h3 {padding:10px 0;}
+
+
+.item_info {float:right; margin-right:10px;}
+.itemimage {float:right;}
