@@ -27,30 +27,38 @@ function get_top_nav(){
 	
 	
 	}
+	
+function isUser(){
+	if(isset($_SESSION['user']->ulevel))
+		return $_SESSION['user']->ulevel;
+	else
+		return FALSE;
+}
 
-function get_content(){
-	global $sitemap;
-
-	switch ($sitemap['location']){
-		case 'menu':
-			echo "menu";
-			break;
-		case 'account':
-			//include (ABSPATH.'theme/acount.php');
-			break;
-		default:
-			include (ABSPATH.'theme/main.php');
-
+function getItemsByType($type){
+	global $db;
+	$sql = "select * from items where itemtype = ".$type;
+	$results = $db->query($sql);
+	
+	$items = array();
+	while($row = mysql_fetch_assoc($results)){
+		$item = new Item();
+		$item->itemFromArray($row);
+		$items[] = $item;
 	}
 	
+	return $items;
 	
-	
-	
-	}
+}
 
 
-
-function __($string){
+/*
+ * 	The next two function are paceholder for the translation
+ * 	functionality. thy should be commented out when 
+ * 	a proper 1l8n class be placed
+ * 
+ */
+function __($string){ 
 	return $string;
 }
 
@@ -58,6 +66,7 @@ function _e($string){
 	echo $string;
 	}
 	
+	/**/
 	
 function isAllowedExtension($file) {
 	  $allowed_extensions = array('jpg','png','gif');

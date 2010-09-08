@@ -58,3 +58,14 @@ body {
 
 .item_info {float:right; margin-right:10px;}
 .itemimage {float:right;}
+.item_wrapper {width:600px;float:left;clear:both;margin-bottom:10px; padding:10px;}
+.item_wrapper:hover{background:#c3c3c3;}
+
+.addtoorder {cursor:pointer; margin:30px 10px 0 0; float:left;}
+
+
+#prices table td {padding:10px 0}
+#add_item_to_Cart ul li {margin:10px 0}
+.description {font-weight:bold;}
+
+.small {width:20px;}

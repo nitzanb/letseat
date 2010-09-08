@@ -22,11 +22,10 @@
 
 global $sitemap;
 if(isset($sitemap['action']))
-	$iid = $sitemap['action'];
+	$type = $sitemap['action'];
 else
-	$iid = 9;
-$item = new Item();
-$item->populatItem($iid);
+	$type = 1;
+	$items = getItemsByType($type);
 ?>
 
 
@@ -34,17 +33,21 @@ $item->populatItem($iid);
 	<div id="widecb" >
 	<div id="additemnav">
 			<ul>
-				<li><a href="" title=""><?_e('Combina');?></a></li>
-				<li><a href="" title=""><?_e('Meals');?></a></li>
-				<li><a href="" title=""><?_e('Main ');?></a></li>	
-				<li><a href="" title=""><?_e('Drinks');?></a></li>	
-				<li><a href="" title=""><?_e('Extras');?></a></li>
-				<li><a href="" title=""><?_e('Deserts');?></a></li>
+				<li><a href="<?php echo HOME.'menu/6';?>" title=""><?_e('Combina');?></a></li>
+				<li><a href="<?php echo HOME.'menu/5';?>" title=""><?_e('Meals');?></a></li>
+				<li><a href="<?php echo HOME.'menu/3';?>" title=""><?_e('Main Dishes');?></a></li>	
+				<li><a href="<?php echo HOME.'menu/1';?>" title=""><?_e('Drinks');?></a></li>	
+				<li><a href="<?php echo HOME.'menu/4';?>" title=""><?_e('Extras');?></a></li>
+				<li><a href="<?php echo HOME.'menu/2';?>" title=""><?_e('Deserts');?></a></li>
 						
 			</ul>
 		</div>
 		<div id="menuitemlist">
-		<?echo $item;?>
+		<?
+		
+			foreach ($items as $item)
+					echo $item;
+		?>
 		</div>
 	
 	

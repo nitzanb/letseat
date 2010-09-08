@@ -19,6 +19,7 @@ session_start();
  */
 
 	$sitemap = array();
+	$sitemap['currency'] = __('$');
 	$url = $_SERVER[ 'REQUEST_URI'  ];
 	$url = trim($url, '/');
 	

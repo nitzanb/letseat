@@ -89,11 +89,28 @@ class Item{
 		
 	}
 	
+	public function itemFromArray($record){
+			$this->itemid = $record['itemid'];
+			$this->itemcode = $record['itemcode'];
+			$this->itemname = $record['itemname'];
+			$this->itemtype = $record['itemtype'];
+			$this->prices = $record['prices'];
+			$this->pricem = $record['pricem'];
+			$this->pricel = $record['pricel'];
+			$this->image = $record['image'];
+			$this->itemsettings = $record['itemsettings'];
+			
+		
+	}
+	
 	public function deleteItem($id){
 		$sql = "DELETE FROM `".TBL_ITEMS."` WHERE `itemid`=$id";
 		$db->query($sql);		
 	}
 	
+	/*
+	 * 	we update the fields for an item in the table
+	 */ 
 	public function updateItem($itemid, $itemcode, $itemname, $itemtype, $prices, $pricem, $pricel, $image, $itemsettings){
 		global $db;
 		$sql = "SELECT * FROM `".TBL_ITEMS."` WHERE `itemid` = '$itemid'";
@@ -115,27 +132,51 @@ class Item{
 			return addNewItem( $itemcode, $itemname, $itemtype, $prices, $pricem, $pricel, $image, $itemsettings);		
 	}
 	
-	public function __toString(){
-		
+	/*	
+	 * 	_toString is a php function that sets the class output 
+	 * 	(much like toString in Java)
+	 * 	in order to show an item we can now use 
+	 * 			echo $item;
+	 *	insted of retyping the full code 
+	 */
+	
+	public function __toString(){		
 		$string =  '<div class="item_wrapper" id="item-'.$this->itemid.'">';
 		$string .= '<img class="itemimage" src='.HOME.'images/items/'.$this->image.' alt = '.$this->itemname.' />';
 		$string .='<div class = "item_info">';
-		$string .= '<h3><a href="'.HOME.'item/'.$this->itemid.'" title="'. __('Order').'">'.$this->itemname.'</a></h3>';
+		// We want to prevent unregistered user from entering the order item page
+		if(isUser()) 
+			$string .= '<h3><a href="'.HOME.'item/'.$this->itemid.'" title="'. __('Order').'">'.$this->itemname.'</a></h3>';
+		else
+			$string .= '<h3>'.$this->itemname.'</h3>';
+		
 		$string .= '<div class="item_price"><table>';
 		switch ($this->itemtype){
 			case 1:
-				$string .= sprintf(__('<tr><td class="desc">330cc can</td><td> %s </td></tr><tr><td class="price"> 500cc bottle</td><td> %s</td></tr>'),$this->prices, $this->pricem);
-			
-			
-			
-		}
-		
+				$string .= sprintf(__('<tr><td class="desc">330cc can</td><td> %s </td></tr><tr><td class="price"> 500cc bottle</td><td> %s</td></tr>'),$this->prices, $this->pricem);		
+				break;
+			case 2:
+				$string .= sprintf(__('<tr><td class="desc">מחיר: </td><td> %s </td></tr>'),$this->prices);	
+				break;
+			case 3: 
+				$string .= sprintf(__('<tr><td class="desc">regular</td><td> %s </td></tr><tr><td class="price">double</td><td> %s</td></tr><tr><td class="price">Triple</td><td> %s</td></tr>'),$this->prices, $this->pricem, $this->pricel);			
+				break;
+			case 4: 
+			case 5:
+				$string .= sprintf(__('<tr><td class="desc">Small</td><td> %s </td></tr><tr><td class="price">Medium</td><td> %s</td></tr><tr><td class="price">Large</td><td> %s</td></tr>'),$this->prices, $this->pricem, $this->pricel);			
+				break;
+			case 6:
+				$string .= sprintf(__('<tr><td class="desc">For 3</td><td> %s </td></tr><tr><td class="price">For 4</td><td> %s</td></tr>'), $this->pricem, $this->pricel);			
+				break;			
+			}		
 		$string .= '</table></div>';
-		
-		$string .= '</div></div>';
-		return $string;
-		
-		
+		$string .= '</div>';
+		// We want to prevent unregistered user from entering the order item page
+		if(isUser()){	
+			$string .= '<a href="'.HOME.'item/'.$this->itemid.'" title="'.__('Add this item to your cart').'"><img class="addtoorder" src="'.HOME.'images/addtocart.png" alt="Add to order"></a>';
+		}
+		$string .='</div>';
+		return $string;		
 	}
-	
+		
 }
