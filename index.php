@@ -10,6 +10,10 @@
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
 require_once(ABSPATH.'config/config.php');
+require_once(ABSPATH . 'plugins/l10n.php');
+
+load_textdomain('default',ABSPATH.'lang/default.mo');
+
 session_start(); 
 /*
  * 	Are there any variables? 
@@ -40,12 +44,14 @@ if ($sitemap['action'] =='logout'){
 	get_top_nav(); //Call the navigation
 	
 	
-		
-	if($sitemap['location']!='home'){
+	
 		$path = ABSPATH.'theme/'.$sitemap['location'].'.php';
-		require_once($path);
-	}
-
+		
+		if (file_exists($path))
+			include($path);
+		else
+			include(ABSPATH.'theme/slug.php');
+	
 		
 	
 ?>

@@ -51,25 +51,23 @@ function getItemsByType($type){
 	
 }
 
-
-/*
- * 	The next two function are paceholder for the translation
- * 	functionality. thy should be commented out when 
- * 	a proper 1l8n class be placed
- * 
- */
-function __($string){ 
-	return $string;
-}
-
-function _e($string){
-	echo $string;
-	}
-	
-	/**/
-	
 function isAllowedExtension($file) {
 	  $allowed_extensions = array('jpg','png','gif');
 	  $file = strtolower($file);
 	  return in_array(end(explode(".", $file)), $allowed_extensions);
 	}
+
+function getAllPages(){
+	global $db;
+	$sql = "select * from ".TBL_PAGES." where status = 1";
+	$results = $db->query($sql);
+	$pages = array();
+	while($row = mysql_fetch_assoc($results)){
+		$page = new Page();
+		$page->pageFromArray($row);
+		$pages[] = $page;
+	}
+	
+	return $pages;
+	
+}

@@ -76,18 +76,9 @@ class Item{
 		//echo $sql;
 		$record = $db->query_first($sql);	
 		if ($record){
-			$this->itemid = $record['itemid'];
-			$this->itemcode = $record['itemcode'];
-			$this->itemname = $record['itemname'];
-			$this->itemtype = $record['itemtype'];
-			$this->prices = $record['prices'];
-			$this->pricem = $record['pricem'];
-			$this->pricel = $record['pricel'];
-			$this->image = $record['image'];
-			$this->itemsettings = $record['itemsettings'];
-			}
-		
-	}
+			$this->itemFromArray($record);
+			}		
+		}
 	
 	public function itemFromArray($record){
 			$this->itemid = $record['itemid'];
@@ -98,9 +89,7 @@ class Item{
 			$this->pricem = $record['pricem'];
 			$this->pricel = $record['pricel'];
 			$this->image = $record['image'];
-			$this->itemsettings = $record['itemsettings'];
-			
-		
+			$this->itemsettings = $record['itemsettings'];	
 	}
 	
 	public function deleteItem($id){

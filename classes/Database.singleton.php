@@ -95,7 +95,7 @@ public function connect($new_link=false){
 	if(!@mysql_select_db($this->database, $this->link_id)){//no database
 		$this->oops("Could not open database: <b>$this->database</b>.");
 		}
-
+mysql_set_charset('utf8',$this->link_id); 
 	// unset the data so it can't be dumped
 	$this->server='';
 	$this->user='';

@@ -33,6 +33,7 @@ global $sitemap;
 				
 				<li class="<? echo ($sitemap['location']=='additem') ? "active" : ""; ?>"><a href="<? echo HOME ;?>additem" title="<?_e('Add new Item');?>"><?_e('Add new Item');?></a></li>
 				<li class="<? echo ($sitemap['location']=='listitems') ? "active" : ""; ?>"><a href="<? echo HOME ;?>listitems" title="<?_e('Manage Items');?>"><?_e('Manage Items');?></a></li>
+				<li class="<? echo ($sitemap['location']=='addnewpage') ? "active" : ""; ?>"><a href="<? echo HOME ;?>addnewpage" title="<?_e('Add New Page');?>"><?_e('Add New Page');?></a></li>
 			<?}
 		
 		?>

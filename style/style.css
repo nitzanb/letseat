@@ -7,10 +7,10 @@ body {
 	font-family:arial;
 	background:#b3141a;
 }
+small{font-size:11px;}
 
 #wrapper{width:960px; margin:10px auto;}
-#header {padding:20px 550px 0 0; background:url(../images/header.png) no-repeat; height:220px;}
-
+#header {background:url("../images/header.png") no-repeat scroll 0 0 transparent;height:143px;padding:96px 357px 0 0;}
 #header h1 {font-size:25px}
 #header div.slogen {margin-top:20px; font-size:20px}
 

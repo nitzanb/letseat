@@ -19,6 +19,11 @@
  *      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
  *      MA 02110-1301, USA.
  */
+
+global $sitemap;
+
+
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -30,9 +35,23 @@
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 	<meta name="generator" content="Geany 0.16" />
 	<link type="text/css" rel="Stylesheet" media="screen" href="/style/style.css"/>
+	<?php if($sitemap['location'] == 'addnewpage'){?>
+		<!-- Skin CSS file -->
+		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.1/build/assets/skins/sam/skin.css">
+		<!-- Utility Dependencies -->
+		<script src="http://yui.yahooapis.com/2.8.1/build/yahoo-dom-event/yahoo-dom-event.js"></script> 
+		<script src="http://yui.yahooapis.com/2.8.1/build/element/element-min.js"></script> 
+		<!-- Needed for Menus, Buttons and Overlays used in the Toolbar -->
+		<script src="http://yui.yahooapis.com/2.8.1/build/container/container_core-min.js"></script>
+		<script src="http://yui.yahooapis.com/2.8.1/build/menu/menu-min.js"></script>
+		<script src="http://yui.yahooapis.com/2.8.1/build/button/button-min.js"></script>
+		<!-- Source file for Rich Text Editor-->
+		<script src="http://yui.yahooapis.com/2.8.1/build/editor/editor-min.js"></script>
+		<?php }?>
+		
 </head>
 
-<body>
+<body class="yui-skin-sam">
 	
 <div id="wrapper">
 	<div id="header">

@@ -8,3 +8,4 @@
 
 require_once('User.php');
 require_once('Item.php');
+require_once('Page.php');

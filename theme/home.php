@@ -27,7 +27,7 @@
 <div id="wrap">
 	<div id="widecb">
 		<div id="additemnav">
-			<ul>
+		<ul>
 			<?php 
 				$pages = getAllPages();
 				foreach($pages as $page){?>
