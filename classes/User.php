@@ -29,6 +29,7 @@ class User{
 	var $ulevel;
 	var $upass;
 	var $realname;
+	var $phone;
 	
 	public function populateUser($uid){
 		global $db;		
@@ -41,7 +42,8 @@ class User{
 			$this->umail = $record['email'];
 			$this->ulevel = $record['ulevel'];
 			$this->upass = $record['password'];
-			$this->realname = $record['realname'];			
+			$this->realname = $record['realname'];		
+			$this->phone = $record['phone'];	
 		}
 	
 		
@@ -61,7 +63,7 @@ class User{
 	 * 	if not - creates new user and add to db
 	 * 
 	 */ 
-	public function addNewUser($username, $password, $email, $realname){
+	public function addNewUser($username, $password, $email, $realname,  $phone){
 		global $db;		
 		//check if username already exist		
 		$sql = "SELECT uname FROM `".TBL_USERS."` WHERE `uname` = '$username'";
@@ -87,6 +89,7 @@ class User{
 		$data['ulevel'] = $ulevel;
 		$data['email']	= 	$email;
 		$data['realname']	= 	$realname;
+		$data['phone'] = $phone;
 	
 		$qid = $db->insert(TBL_USERS, $data); //if query succedded I get the new user Id
 		

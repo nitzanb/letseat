@@ -70,8 +70,8 @@ if(isset($_POST['sublogin'])){
 				<font size="2"><?_e('Remember me next time &nbsp;&nbsp;&nbsp;&nbsp;');?>
 				<input type="hidden" name="sublogin" value="1">
 				<input type="submit" value="Login"></td></tr>
-				<tr><td colspan="2" align="left"><br><font size="2">[<a href="forgotpass.php"><?_e('Forgot Password?');?></a>]</font></td><td align="right"></td></tr>
-				<tr><td colspan="2" align="left"><br><a href="register.php"><?_e('Sign-Up!');?></a></td></tr>
+				<tr><td colspan="2" align="left"><br><font size="2">[<a href="forgotpass"><?_e('Forgot Password?');?></a>]</font></td><td align="right"></td></tr>
+				<tr><td colspan="2" align="left"><br><a href="register"><?_e('Sign-Up!');?></a></td></tr>
 			</table>
 		</form>
 		

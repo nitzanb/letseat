@@ -5,7 +5,7 @@ html {direction:rtl;text-align:right;}
 body {
 	font-size: 14px;
 	font-family:arial;
-	background:#b3141a;
+	background:#b3141a;overflow-x:hidden;
 }
 small{font-size:11px;}
 
