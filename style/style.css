@@ -17,6 +17,8 @@ small{font-size:11px;}
 #topnav {height:30px; background:#ffffff; line-height:30px;}
 
 #topnav ul li {float:right; margin:0 10px;}
+#topnav ul li.left {background:url("/images/cart-icon.png") no-repeat scroll right center transparent;float:left;padding-right:40px;}
+#topnav ul li.left:hover{background:url("/images/cart-icon_h.png") no-repeat scroll right center transparent;}
 #topnav ul li a {text-decoration:none; color:#b3141a; font-weight:bold;}
 #topnav ul li a:hover{ color:#000000;} 
 #topnav ul li.active a {color:#000000;} 
@@ -69,3 +71,7 @@ small{font-size:11px;}
 .description {font-weight:bold;}
 
 .small {width:20px;}
+
+
+#myCart td, #myCart th{padding:5px 10px; text-align:center; }
+#chekoutbtn{ text-align:left;margin-top:50px;}

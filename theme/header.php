@@ -47,7 +47,8 @@ global $sitemap;
 		<script src="http://yui.yahooapis.com/2.8.1/build/button/button-min.js"></script>
 		<!-- Source file for Rich Text Editor-->
 		<script src="http://yui.yahooapis.com/2.8.1/build/editor/editor-min.js"></script>
-		<?php }?>
+		<?php }?>		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 		
 </head>
 

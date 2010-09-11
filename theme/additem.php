@@ -22,14 +22,16 @@
 
 if(isset($_GET['type']))
 	$itemType = $_GET['type'];
+else
+	$itemType = 3;
 	
 if(isset($_GET['iid'])){	
 	$item = new Item();
 	$item->populatItem($_GET['iid']);
 	}
 	
-//print_r($_POST);	
-if(isset($_POST['form_id']) && $_POST['form_id'] == FORM_SUBMIT){
+	
+if(isset($_POST['form_id']) && $_POST['form_id'] == FORM_SUBMIT && isAdmin()){
 
 	$itemcode= $_POST['itemcode'];
 	$itemname= $_POST['itemname'];	
@@ -98,6 +100,14 @@ $itemTypeName = array(	'1'=> __('Drink'),
 	
 	
 <div id="formblock">
+<?php if(!isAdmin()):?>
+
+<h2><?_e('You are not supposed to be here');?></h2>
+
+<p><?_e('Please Dont try that again');?></p>
+
+<?php else:?>
+
 	<h2><?echo sprintf(__('Add %s to Menu'),$itemTypeName[$itemType]) ;?></h2>
 <!-- Form Start -->
 <form id="form_2870" class="appnitro" enctype="multipart/form-data" method="post" action="">				
@@ -225,6 +235,7 @@ $itemTypeName = array(	'1'=> __('Drink'),
 		</li>
 	</ul>
 </form>	
+<?php endif;?>
 </div>
 <!-- Form End -->
 <div style="clear:both"></div>

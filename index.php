@@ -15,6 +15,10 @@ require_once(ABSPATH . 'plugins/l10n.php');
 load_textdomain('default',ABSPATH.'lang/default.mo');
 
 session_start(); 
+$cart = array();
+
+$adminPages = array ('additem', 'addnewpage');
+
 /*
  * 	Are there any variables? 
  * 	GET or POST? 
@@ -35,6 +39,16 @@ session_start();
 	
 	if(isset($location[1]))
 			$sitemap['action'] = $location[1];
+
+
+
+if(!isAdmin() && in_array($sitemap['location'], $adminPages))
+	header('Location: '.HOME);
+	
+if($sitemap['location']=='removeitem'){
+	removeFromCart($sitemap['action']);
+	header('Location: '.HOME.'mycart');
+	}
 
 if ($sitemap['action'] =='logout'){
 		session_destroy();

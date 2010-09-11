@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Burgeranch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-09 23:42+0200\n"
+"POT-Creation-Date: 2010-09-11 13:44+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Nitzan Brumer <nitzanb@gmail.com>\n"
 "Language-Team: NyV <nitzanb@gmail.com>\n"
@@ -16,58 +16,60 @@ msgstr ""
 "X-Poedit-Basepath: /home/nitzan/www/letseat\n"
 "X-Poedit-SearchPath-0: /home/nitzan/www/letseat\n"
 
-#: /home/nitzan/www/letseat/index.php:26
+#: /home/nitzan/www/letseat/index.php:30
 msgid "$"
 msgstr "₪"
 
 #: /home/nitzan/www/letseat/functions/cart.php:26
-#: /home/nitzan/www/letseat/functions/cart.php:76
+#: /home/nitzan/www/letseat/functions/cart.php:66
 msgid "You have no items in your shopping cart"
 msgstr "אין פריטים בהזמנה"
 
-#: /home/nitzan/www/letseat/functions/cart.php:35
+#: /home/nitzan/www/letseat/functions/cart.php:34
 #, php-format
 msgid "You have %s items in your shopping cart"
 msgstr "יש %s פריטים בהזמנה"
 
-#: /home/nitzan/www/letseat/functions/cart.php:83
+#: /home/nitzan/www/letseat/functions/cart.php:73
 msgid "Item Name"
 msgstr "שם הפריט"
 
-#: /home/nitzan/www/letseat/functions/cart.php:84
+#: /home/nitzan/www/letseat/functions/cart.php:74
 msgid "Notes"
 msgstr "הערות"
 
-#: /home/nitzan/www/letseat/functions/cart.php:85
+#: /home/nitzan/www/letseat/functions/cart.php:75
 msgid "Amount"
 msgstr "כמות"
 
-#: /home/nitzan/www/letseat/functions/cart.php:86
+#: /home/nitzan/www/letseat/functions/cart.php:76
 msgid "Total"
 msgstr "סה\"כ"
 
-#: /home/nitzan/www/letseat/functions/cart.php:87
+#: /home/nitzan/www/letseat/functions/cart.php:77
 msgid "update"
 msgstr "עדכון"
 
-#: /home/nitzan/www/letseat/theme/main.php:31
-msgid "About the network"
-msgstr "אודות הרשת"
+#: /home/nitzan/www/letseat/functions/adresses.php:201
+#, php-format
+msgid "Street %s %s Floor %s, %s <br/>"
+msgstr "רחוב %s %s קומה %s, %s <br/>"
 
-#: /home/nitzan/www/letseat/theme/main.php:32
-#: /home/nitzan/www/letseat/theme/main.php:33
-msgid "Deals of the Mounth"
-msgstr "מבצעי החודש"
+#: /home/nitzan/www/letseat/theme/slug.php:13
+msgid "You are not suppose to be here"
+msgstr "אתה לא אמור להיות פה"
 
-#: /home/nitzan/www/letseat/theme/main.php:38
+#: /home/nitzan/www/letseat/theme/main.php:42
 msgid "Page title"
 msgstr "כותרת העמוד"
 
 #: /home/nitzan/www/letseat/theme/account.php:48
+#: /home/nitzan/www/letseat/theme/profile.php:16
 msgid "Orders history"
 msgstr "היסטוריית הזמנות"
 
 #: /home/nitzan/www/letseat/theme/account.php:49
+#: /home/nitzan/www/letseat/theme/profile.php:17
 msgid "Add Address"
 msgstr "הוספת כתובת"
 
@@ -103,109 +105,227 @@ msgstr "שכחת סיסמא?"
 msgid "Sign-Up!"
 msgstr "הרשמה"
 
-#: /home/nitzan/www/letseat/theme/header.php:39
+#: /home/nitzan/www/letseat/theme/header.php:59
 msgid "Our happy Site"
 msgstr "בורגראנץ'"
 
-#: /home/nitzan/www/letseat/theme/header.php:40
+#: /home/nitzan/www/letseat/theme/header.php:60
 msgid "Our happy slogen"
 msgstr "כמו שאני אוהב"
 
-#: /home/nitzan/www/letseat/theme/additem.php:72
+#: /home/nitzan/www/letseat/theme/profile.php:18
+msgid "My Profile"
+msgstr "הפרופיל שלי"
+
+#: /home/nitzan/www/letseat/theme/profile.php:25
+msgid "My info"
+msgstr "הפרטים שלי"
+
+#: /home/nitzan/www/letseat/theme/profile.php:30
+msgid "Name:"
+msgstr "שם:"
+
+#: /home/nitzan/www/letseat/theme/profile.php:34
+msgid "Mail:"
+msgstr "דואר אלקטרוני:"
+
+#: /home/nitzan/www/letseat/theme/profile.php:39
+msgid "Your Addresses"
+msgstr "כתובת"
+
+#: /home/nitzan/www/letseat/theme/profile.php:48
+msgid "You need to login in order to see your info"
+msgstr "רק משתמשים מחוברים יכולים לראות את הפרטים שלהם"
+
+#: /home/nitzan/www/letseat/theme/addnewpage.php:43
+msgid "About the network"
+msgstr "אודות הרשת"
+
+#: /home/nitzan/www/letseat/theme/addnewpage.php:44
+#: /home/nitzan/www/letseat/theme/addnewpage.php:45
+msgid "Deals of the Mounth"
+msgstr "מבצעי החודש"
+
+#: /home/nitzan/www/letseat/theme/addnewpage.php:54
+msgid "Title"
+msgstr "כותרת"
+
+#: /home/nitzan/www/letseat/theme/addnewpage.php:58
+msgid "Slug <small>Thats for the nice links</small>"
+msgstr "מזהה <small>המערכת תשתמש בזה בשביל לבנות לינקים יפים</small>"
+
+#: /home/nitzan/www/letseat/theme/addnewpage.php:62
+msgid "Content"
+msgstr "תוכן"
+
+#: /home/nitzan/www/letseat/theme/additem.php:74
 msgid "Drink"
 msgstr "שתיה"
 
-#: /home/nitzan/www/letseat/theme/additem.php:73
+#: /home/nitzan/www/letseat/theme/additem.php:75
 msgid "Dessert"
 msgstr "קינוחים"
 
-#: /home/nitzan/www/letseat/theme/additem.php:74
+#: /home/nitzan/www/letseat/theme/additem.php:76
 msgid "Meat"
 msgstr "מנות עיקריות"
 
-#: /home/nitzan/www/letseat/theme/additem.php:75
+#: /home/nitzan/www/letseat/theme/additem.php:77
 msgid "Extra"
 msgstr "תוספות"
 
-#: /home/nitzan/www/letseat/theme/additem.php:76
+#: /home/nitzan/www/letseat/theme/additem.php:78
 msgid "Meal"
 msgstr "ארוחות"
 
-#: /home/nitzan/www/letseat/theme/additem.php:77
+#: /home/nitzan/www/letseat/theme/additem.php:79
 #: /home/nitzan/www/letseat/theme/menu.php:36
-#: /home/nitzan/www/letseat/theme/item.php:22
+#: /home/nitzan/www/letseat/theme/item.php:24
 msgid "Combina"
 msgstr "קומבינה"
 
-#: /home/nitzan/www/letseat/theme/additem.php:88
+#: /home/nitzan/www/letseat/theme/additem.php:90
 msgid "Add drinks"
 msgstr "הוסף משקאות"
 
-#: /home/nitzan/www/letseat/theme/additem.php:89
+#: /home/nitzan/www/letseat/theme/additem.php:91
 msgid "Add Desserts"
 msgstr "הוסף קינוחים"
 
-#: /home/nitzan/www/letseat/theme/additem.php:90
+#: /home/nitzan/www/letseat/theme/additem.php:92
 msgid "Add meat"
 msgstr "הוסף מנות עיקריות"
 
-#: /home/nitzan/www/letseat/theme/additem.php:91
+#: /home/nitzan/www/letseat/theme/additem.php:93
 msgid "Add Extras"
 msgstr "הוסף תוספות"
 
-#: /home/nitzan/www/letseat/theme/additem.php:92
+#: /home/nitzan/www/letseat/theme/additem.php:94
 msgid "Add Meals"
 msgstr "הוסף ארוחות"
 
-#: /home/nitzan/www/letseat/theme/additem.php:101
+#: /home/nitzan/www/letseat/theme/additem.php:105
+msgid "You are not supposed to be here"
+msgstr "אתה לא אמור להיות פה "
+
+#: /home/nitzan/www/letseat/theme/additem.php:107
+msgid "Please Dont try that again"
+msgstr "בבקשה אל תנסה זאת שוב"
+
+#: /home/nitzan/www/letseat/theme/additem.php:111
 #, php-format
 msgid "Add %s to Menu"
 msgstr "הוספת %s לתפריט"
 
-#: /home/nitzan/www/letseat/theme/additem.php:106
+#: /home/nitzan/www/letseat/theme/additem.php:116
 msgid "Product Name"
 msgstr "שם המוצר"
 
-#: /home/nitzan/www/letseat/theme/additem.php:112
+#: /home/nitzan/www/letseat/theme/additem.php:122
 msgid "Product Code"
 msgstr "קוד המוצר"
 
-#: /home/nitzan/www/letseat/theme/additem.php:119
+#: /home/nitzan/www/letseat/theme/additem.php:129
 msgid "Price - 330cc Can"
 msgstr "מחיר - פחות 330CC"
 
-#: /home/nitzan/www/letseat/theme/additem.php:121
+#: /home/nitzan/www/letseat/theme/additem.php:131
 msgid "Price"
 msgstr "מחיר"
 
-#: /home/nitzan/www/letseat/theme/additem.php:123
+#: /home/nitzan/www/letseat/theme/additem.php:133
 msgid "Price - Small"
 msgstr "מחיר - S"
 
-#: /home/nitzan/www/letseat/theme/additem.php:139
+#: /home/nitzan/www/letseat/theme/additem.php:149
 msgid "Price - 500cc Bottle"
 msgstr "מחיר - בקבוק 500CC"
 
-#: /home/nitzan/www/letseat/theme/additem.php:141
+#: /home/nitzan/www/letseat/theme/additem.php:151
 msgid "Price - Medium"
 msgstr "מחיר - M"
 
-#: /home/nitzan/www/letseat/theme/additem.php:155
+#: /home/nitzan/www/letseat/theme/additem.php:165
 msgid "Price - Large"
 msgstr "מחיר - L"
 
-#: /home/nitzan/www/letseat/theme/additem.php:166
+#: /home/nitzan/www/letseat/theme/additem.php:176
 msgid "Product Image"
 msgstr "תמונה לפריט"
 
-#: /home/nitzan/www/letseat/theme/additem.php:181
+#: /home/nitzan/www/letseat/theme/additem.php:191
 msgid "Components"
 msgstr "מרכיבים"
 
-#: /home/nitzan/www/letseat/theme/additem.php:224
-#: /home/nitzan/www/letseat/theme/item.php:88
+#: /home/nitzan/www/letseat/theme/additem.php:234
+#: /home/nitzan/www/letseat/theme/item.php:94
 msgid "Submit"
 msgstr "שליחה"
+
+#: /home/nitzan/www/letseat/theme/register.php:25
+msgid "Registration Form"
+msgstr "טופס הרשמה"
+
+#: /home/nitzan/www/letseat/theme/register.php:38
+msgid "Passwords dont match"
+msgstr "הסיסמאות לא תואמות"
+
+#: /home/nitzan/www/letseat/theme/register.php:48
+msgid "You are already loged in"
+msgstr "אתה כבר מחובר"
+
+#: /home/nitzan/www/letseat/theme/register.php:50
+msgid "Log Out"
+msgstr "התנתק "
+
+#: /home/nitzan/www/letseat/theme/register.php:60
+msgid "User Name"
+msgstr "שם משתמש: "
+
+#: /home/nitzan/www/letseat/theme/register.php:64
+msgid "Password"
+msgstr "סיסמא: "
+
+#: /home/nitzan/www/letseat/theme/register.php:68
+msgid "Password <small>again</small>"
+msgstr "סיסמא <small>שוב</small>"
+
+#: /home/nitzan/www/letseat/theme/register.php:72
+msgid "Full Name"
+msgstr "שם מלא"
+
+#: /home/nitzan/www/letseat/theme/register.php:76
+msgid "Phone Number"
+msgstr "מספר טלפון"
+
+#: /home/nitzan/www/letseat/theme/register.php:80
+msgid "Email"
+msgstr "דואר אלקטרוני"
+
+#: /home/nitzan/www/letseat/theme/register.php:85
+#: /home/nitzan/www/letseat/theme/addadress.php:73
+msgid "Click ME"
+msgstr "לחץ עלי"
+
+#: /home/nitzan/www/letseat/theme/addadress.php:46
+msgid "Adding Addresses"
+msgstr "הוספת כתובת"
+
+#: /home/nitzan/www/letseat/theme/addadress.php:50
+msgid "Select a City"
+msgstr "בחר עיר"
+
+#: /home/nitzan/www/letseat/theme/addadress.php:56
+msgid "Select a Street"
+msgstr "בחר רחוב"
+
+#: /home/nitzan/www/letseat/theme/addadress.php:63
+msgid "Home Number"
+msgstr "מספר בית"
+
+#: /home/nitzan/www/letseat/theme/addadress.php:67
+msgid "Floor"
+msgstr "קומה"
 
 #: /home/nitzan/www/letseat/theme/topnav.php:28
 msgid "Main Page"
@@ -224,69 +344,69 @@ msgid "Add new Item"
 msgstr "הוספת פריט"
 
 #: /home/nitzan/www/letseat/theme/topnav.php:35
-msgid "Manage Items"
-msgstr "ניהול פריטים"
+msgid "Add New Page"
+msgstr "הוספת עמוד "
 
 #: /home/nitzan/www/letseat/theme/menu.php:37
-#: /home/nitzan/www/letseat/theme/item.php:23
+#: /home/nitzan/www/letseat/theme/item.php:25
 msgid "Meals"
 msgstr "ארוחות"
 
 #: /home/nitzan/www/letseat/theme/menu.php:38
-#: /home/nitzan/www/letseat/theme/item.php:24
+#: /home/nitzan/www/letseat/theme/item.php:26
 msgid "Main Dishes"
 msgstr "מנות עיקריות"
 
 #: /home/nitzan/www/letseat/theme/menu.php:39
-#: /home/nitzan/www/letseat/theme/item.php:25
+#: /home/nitzan/www/letseat/theme/item.php:27
 msgid "Drinks"
 msgstr "שתיה"
 
 #: /home/nitzan/www/letseat/theme/menu.php:40
-#: /home/nitzan/www/letseat/theme/item.php:26
+#: /home/nitzan/www/letseat/theme/item.php:28
 msgid "Extras"
 msgstr "תוספות"
 
 #: /home/nitzan/www/letseat/theme/menu.php:41
-#: /home/nitzan/www/letseat/theme/item.php:27
+#: /home/nitzan/www/letseat/theme/item.php:29
 msgid "Deserts"
 msgstr "קינוחים"
 
-#: /home/nitzan/www/letseat/theme/item.php:12
-msgid "You are not suppose to be here"
-msgstr "אתה לא אמור להיות פה"
-
-#: /home/nitzan/www/letseat/theme/item.php:51
+#: /home/nitzan/www/letseat/theme/item.php:53
 msgid "Prices and quantities"
 msgstr "מחירים וכמויות"
 
-#: /home/nitzan/www/letseat/theme/item.php:58
+#: /home/nitzan/www/letseat/theme/item.php:60
 msgid "Small"
 msgstr "קטן"
 
-#: /home/nitzan/www/letseat/theme/item.php:58
+#: /home/nitzan/www/letseat/theme/item.php:60
 msgid "330cc Can"
 msgstr "פחית - 330CC"
 
-#: /home/nitzan/www/letseat/theme/item.php:65
+#: /home/nitzan/www/letseat/theme/item.php:67
 msgid "Medium"
 msgstr "בינוני"
 
-#: /home/nitzan/www/letseat/theme/item.php:65
+#: /home/nitzan/www/letseat/theme/item.php:67
 msgid "500cc Bottle"
 msgstr "בקבוק חצי ליטר"
 
-#: /home/nitzan/www/letseat/theme/item.php:72
+#: /home/nitzan/www/letseat/theme/item.php:74
 msgid "Large"
 msgstr "גדול"
 
-#: /home/nitzan/www/letseat/theme/item.php:72
+#: /home/nitzan/www/letseat/theme/item.php:74
 msgid "1.5L Bottle"
 msgstr "בקבוק 1.5 ליטר"
 
-#: /home/nitzan/www/letseat/theme/item.php:80
+#: /home/nitzan/www/letseat/theme/item.php:82
 msgid "Quantitiy"
 msgstr "כמויות"
+
+#: /home/nitzan/www/letseat/theme/item.php:86
+msgid "Remarks"
+msgstr "הערות"
 
 #: /home/nitzan/www/letseat/classes/Item.php:52
 msgid "This Item code is already listed"
@@ -296,64 +416,123 @@ msgstr "קוד הפריט כבר בשימוש"
 msgid "Item added successfully"
 msgstr "הפריט הוסף בהצלחה"
 
-#: /home/nitzan/www/letseat/classes/Item.php:128
+#: /home/nitzan/www/letseat/classes/Item.php:117
 msgid "Item Updated successfully"
 msgstr "הפריט עודכן בהצלחה"
 
-#: /home/nitzan/www/letseat/classes/Item.php:149
+#: /home/nitzan/www/letseat/classes/Item.php:138
 msgid "Order"
 msgstr "הזמנה"
 
-#: /home/nitzan/www/letseat/classes/Item.php:156
+#: /home/nitzan/www/letseat/classes/Item.php:150
 #, php-format
-msgid "<tr><td class=\"desc\">330cc can</td><td> %s </td></tr><tr><td class=\"price\"> 500cc bottle</td><td> %s</td></tr>"
-msgstr "<tr><td class=\"desc\">פחית 330CC</td><td> %s </td></tr><tr><td class=\"price\"> בקבוק 500CC</td><td> %s</td></tr>"
+msgid "<tr><td class=\"desc\">330cc can</td><td> %s </td></tr>"
+msgstr "<tr><td class=\"desc\">פחית</td><td> %s </td></tr>"
 
-#: /home/nitzan/www/letseat/classes/Item.php:159
+#: /home/nitzan/www/letseat/classes/Item.php:152
+#, php-format
+msgid "<tr><td class=\"desc\">500cc bottle</td><td> %s </td></tr>"
+msgstr "<tr><td class=\"desc\">בקבוק 0.5 ל': </td><td> %s </td></tr>"
+
+#: /home/nitzan/www/letseat/classes/Item.php:155
 #, php-format
 msgid "<tr><td class=\"desc\">מחיר: </td><td> %s </td></tr>"
 msgstr "<tr><td class=\"desc\">מחיר: </td><td> %s </td></tr>"
 
-#: /home/nitzan/www/letseat/classes/Item.php:162
+#: /home/nitzan/www/letseat/classes/Item.php:159
 #, php-format
-msgid "<tr><td class=\"desc\">regular</td><td> %s </td></tr><tr><td class=\"price\">double</td><td> %s</td></tr><tr><td class=\"price\">Triple</td><td> %s</td></tr>"
-msgstr "<tr><td class=\"desc\">רגיל</td><td> %s </td></tr><tr><td class=\"price\">כפול</td><td> %s</td></tr><tr><td class=\"price\">משולש</td><td> %s</td></tr>"
+msgid "<tr><td class=\"desc\">Regular</td><td> %s </td></tr>"
+msgstr "<tr><td class=\"desc\">רגיל</td><td> %s </td></tr>"
 
-#: /home/nitzan/www/letseat/classes/Item.php:166
+#: /home/nitzan/www/letseat/classes/Item.php:161
 #, php-format
-msgid "<tr><td class=\"desc\">Small</td><td> %s </td></tr><tr><td class=\"price\">Medium</td><td> %s</td></tr><tr><td class=\"price\">Large</td><td> %s</td></tr>"
-msgstr "<tr><td class=\"desc\">קטן</td><td> %s </td></tr><tr><td class=\"price\">בינוני</td><td> %s</td></tr><tr><td class=\"price\">גדול</td><td> %s</td></tr>"
+msgid "<tr><td class=\"desc\">Double</td><td> %s </td></tr>"
+msgstr "<tr><td class=\"desc\">כפול</td><td> %s </td></tr>"
+
+#: /home/nitzan/www/letseat/classes/Item.php:163
+#, php-format
+msgid "<tr><td class=\"desc\">Triple</td><td> %s </td></tr>"
+msgstr "<tr><td class=\"desc\">משולש</td><td> %s </td></tr>"
 
 #: /home/nitzan/www/letseat/classes/Item.php:169
+#, php-format
+msgid "<tr><td class=\"desc\">Small</td><td> %s </td></tr>"
+msgstr "<tr><td class=\"desc\">קטן</td><td> %s </td></tr>"
+
+#: /home/nitzan/www/letseat/classes/Item.php:171
+#, php-format
+msgid "<tr><td class=\"desc\">Medium</td><td> %s </td></tr>"
+msgstr "<tr><td class=\"desc\">בינוני</td><td> %s </td></tr>"
+
+#: /home/nitzan/www/letseat/classes/Item.php:173
+#, php-format
+msgid "<tr><td class=\"desc\">Large</td><td> %s </td></tr>"
+msgstr "<tr><td class=\"desc\">גדול</td><td> %s </td></tr>"
+
+#: /home/nitzan/www/letseat/classes/Item.php:176
 #, php-format
 msgid "<tr><td class=\"desc\">For 3</td><td> %s </td></tr><tr><td class=\"price\">For 4</td><td> %s</td></tr>"
 msgstr "<tr><td class=\"desc\">ל 3</td><td> %s </td></tr><tr><td class=\"price\">ל 4</td><td> %s</td></tr>"
 
-#: /home/nitzan/www/letseat/classes/Item.php:176
+#: /home/nitzan/www/letseat/classes/Item.php:183
 msgid "Add this item to your cart"
 msgstr "הוסף להזמנה"
 
-#: /home/nitzan/www/letseat/classes/User.php:70
+#: /home/nitzan/www/letseat/classes/User.php:72
 msgid "This user name Is already in use"
 msgstr "שם המשתמש כבר תפוס"
 
-#: /home/nitzan/www/letseat/classes/User.php:77
+#: /home/nitzan/www/letseat/classes/User.php:79
 msgid "This email Is already in use"
 msgstr "מישהו כבר נרשם עם כתובת הדוא\"ל הזו"
 
-#: /home/nitzan/www/letseat/classes/User.php:93
+#: /home/nitzan/www/letseat/classes/User.php:96
 msgid "User Created successfully"
 msgstr "משתמש נוצר בהצלחה"
 
-#: /home/nitzan/www/letseat/classes/User.php:115
+#: /home/nitzan/www/letseat/classes/User.php:118
 msgid "Success"
 msgstr "הצלחה"
 
-#: /home/nitzan/www/letseat/classes/User.php:120
+#: /home/nitzan/www/letseat/classes/User.php:123
 msgid "Wrong Password"
 msgstr "סיסמא שגויה"
 
-#: /home/nitzan/www/letseat/classes/User.php:125
+#: /home/nitzan/www/letseat/classes/User.php:128
 msgid "No Such user"
 msgstr "אין משתמש כזה"
+
+#: /home/nitzan/www/letseat/classes/Page.php:37
+#: /home/nitzan/www/letseat/classes/Page.php:93
+msgid "Page added successfully"
+msgstr "העמוד הוסף בהצלחה"
+
+#: /home/nitzan/www/letseat/classes/Page.php:110
+msgid "Sorry, Page not Found"
+msgstr "מצטערים, העמוד לא נמצא"
+
+#~ msgid "Manage Items"
+#~ msgstr "ניהול פריטים"
+#~ msgid ""
+#~ "<tr><td class=\"desc\">330cc can</td><td> %s </td></tr><tr><td class="
+#~ "\"price\"> 500cc bottle</td><td> %s</td></tr>"
+#~ msgstr ""
+#~ "<tr><td class=\"desc\">פחית 330CC</td><td> %s </td></tr><tr><td class="
+#~ "\"price\"> בקבוק 500CC</td><td> %s</td></tr>"
+#~ msgid ""
+#~ "<tr><td class=\"desc\">regular</td><td> %s </td></tr><tr><td class=\"price"
+#~ "\">double</td><td> %s</td></tr><tr><td class=\"price\">Triple</td><td> %"
+#~ "s</td></tr>"
+#~ msgstr ""
+#~ "<tr><td class=\"desc\">רגיל</td><td> %s </td></tr><tr><td class=\"price"
+#~ "\">כפול</td><td> %s</td></tr><tr><td class=\"price\">משולש</td><td> %s</"
+#~ "td></tr>"
+#~ msgid ""
+#~ "<tr><td class=\"desc\">Small</td><td> %s </td></tr><tr><td class=\"price"
+#~ "\">Medium</td><td> %s</td></tr><tr><td class=\"price\">Large</td><td> %s</"
+#~ "td></tr>"
+#~ msgstr ""
+#~ "<tr><td class=\"desc\">קטן</td><td> %s </td></tr><tr><td class=\"price"
+#~ "\">בינוני</td><td> %s</td></tr><tr><td class=\"price\">גדול</td><td> %s</"
+#~ "td></tr>"
 

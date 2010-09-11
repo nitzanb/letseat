@@ -139,20 +139,38 @@ class Item{
 		else
 			$string .= '<h3>'.$this->itemname.'</h3>';
 		
-		$string .= '<div class="item_price"><table>';
+		$string .= '<div class="item_price"><table>';		
+		
+		
+		
+		
 		switch ($this->itemtype){
-			case 1:
-				$string .= sprintf(__('<tr><td class="desc">330cc can</td><td> %s </td></tr><tr><td class="price"> 500cc bottle</td><td> %s</td></tr>'),$this->prices, $this->pricem);		
+			case 1:				
+				if($this->prices != "0.00")
+					$string .= sprintf(__('<tr><td class="desc">330cc can</td><td> %s </td></tr>'),$this->prices);
+				if($this->pricem != "0.00")
+					$string .= sprintf(__('<tr><td class="desc">500cc bottle</td><td> %s </td></tr>'),$this->pricem);				
 				break;
 			case 2:
 				$string .= sprintf(__('<tr><td class="desc">מחיר: </td><td> %s </td></tr>'),$this->prices);	
 				break;
-			case 3: 
-				$string .= sprintf(__('<tr><td class="desc">regular</td><td> %s </td></tr><tr><td class="price">double</td><td> %s</td></tr><tr><td class="price">Triple</td><td> %s</td></tr>'),$this->prices, $this->pricem, $this->pricel);			
+			case 3: 				
+				if($this->prices != "0.00")
+					$string .= sprintf(__('<tr><td class="desc">Regular</td><td> %s </td></tr>'),$this->prices);
+				if($this->pricem != "0.00")
+					$string .= sprintf(__('<tr><td class="desc">Double</td><td> %s </td></tr>'),$this->pricem);				
+				if($this->pricel != "0.00")
+					$string .= sprintf(__('<tr><td class="desc">Triple</td><td> %s </td></tr>'),$this->pricel);			
 				break;
 			case 4: 
 			case 5:
-				$string .= sprintf(__('<tr><td class="desc">Small</td><td> %s </td></tr><tr><td class="price">Medium</td><td> %s</td></tr><tr><td class="price">Large</td><td> %s</td></tr>'),$this->prices, $this->pricem, $this->pricel);			
+			//	$string .= sprintf(__('<tr><td class="desc">Small</td><td> %s </td></tr><tr><td class="price">Medium</td><td> %s</td></tr><tr><td class="price">Large</td><td> %s</td></tr>'),$this->prices, $this->pricem, $this->pricel);			
+				if($this->prices != "0.00")
+					$string .= sprintf(__('<tr><td class="desc">Small</td><td> %s </td></tr>'),$this->prices);
+				if($this->pricem != "0.00")
+					$string .= sprintf(__('<tr><td class="desc">Medium</td><td> %s </td></tr>'),$this->pricem);				
+				if($this->pricel != "0.00")
+					$string .= sprintf(__('<tr><td class="desc">Large</td><td> %s </td></tr>'),$this->pricel);						
 				break;
 			case 6:
 				$string .= sprintf(__('<tr><td class="desc">For 3</td><td> %s </td></tr><tr><td class="price">For 4</td><td> %s</td></tr>'), $this->pricem, $this->pricel);			

@@ -7,7 +7,8 @@
 
 //We load the cart module
 require_once(ABSPATH.'functions/cart.php');
-
+//We load the addresses module
+require_once(ABSPATH.'functions/adresses.php');
 function nicePageTitle(){
 	$title = "Burgeranch";
 	if(TRUE)
@@ -33,6 +34,23 @@ function isUser(){
 		return $_SESSION['user']->ulevel;
 	else
 		return FALSE;
+}
+
+function isAdmin(){
+	if($_SESSION['user']->ulevel == ADMIN_LEVEL)
+		return TRUE;
+	else
+		return FALSE;
+	
+}
+
+
+function logedUid(){
+	if(isset($_SESSION['user']->uid))
+		return $_SESSION['user']->uid;
+	else
+		return FALSE;
+	
 }
 
 function getItemsByType($type){

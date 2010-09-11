@@ -20,90 +20,76 @@
  */
  
   
- function howManyItemsDoIHave() {
+ function howManyItemsDoIHave($value=FALSE) {
 	 $cart = $_SESSION['cart'];
 	 if (!isset($cart)) {
-		 return __('You have no items in your shopping cart');
+		 if (!$value)
+		 	return __('You have no items in your shopping cart');
+		 else
+		 	return 0;
+		 	
 	 	} 
 	else {
 		$count = 0;
-		foreach($cart as $items)
-			foreach($items as $item)
-					$count +=  $item[0];
+		foreach($cart as $line)
+			$count += $line->qtty;
 
-		 
-		 return sprintf  ( __('You have %s items in your shopping cart'), $count );
+		if (!$value)
+			return sprintf  ( __('You have %s items in your shopping cart'), $count );
+		 else
+		 	return $count;	
 		 }
 	 }
  	
-
-function addToCart($itemId, $qantity, $notes){
-	$cart = $_SESSION['cart'];
-	$hadJustThat = FALSE;
-	
-	//Cart is empty - we add the first item
-	if(!isset($cart)) {	
-		$_SESSION['cart'][ $itemId][0] = array( $qantity, $notes);
-		return;
-		}
-	
-	//If we already have that item
-	if(isset($_SESSION['cart'][ $itemId])){
-		$pos = 0;
-			foreach ($_SESSION['cart'][ $itemId] as $note){
-				if( $note[1] ==  $notes){
-						$_SESSION['cart'][ $itemId][$pos][0]= $_SESSION['cart'][ $itemId][$pos][0] + $qantity;
-						return;
-					}
-				else $pos++;
-			}
-		$_SESSION['cart'][ $itemId][] = array( $qantity, $notes);
+	function addToCart($itemId,  $itemName, $qtty, $price, $itemCode, $remarks){
+		$cart = $_SESSION['cart'];
+		$line = new Line();
+		
+		if(!isset($cart)) {	
+			$line->addNewLine(1, $itemId,  $itemName, $qtty, $price, $itemCode, $remarks);
+			
+			$_SESSION['cart'][1] = $line;	
 			return;
-		}
-	
-	$_SESSION['cart'][ $itemId] = array( $qantity, $notes);
+			}
+		
+
+			$pos = count($_SESSION['cart'])+1;
+			$line->addNewLine($pos, $itemId,  $itemName, $qtty, $price, $itemCode, $remarks);
+			$_SESSION['cart'][$pos] = $line;	
+			return;
+	}
+
+
+function removeFromCart($lineId){
+	if(isset($_SESSION['cart'][$lineId]))
+		unset($_SESSION['cart'][$lineId]);
 }
 
-function removeFromCart($itemId, $pos=0){
-	if(isset($_SESSION['cart'][$itemId][$pos]))
-		unset($_SESSION['cart'][$itemId][$pos]);
-}
-
-
-function listRows(){
+function printCartLines(){
 	$cart = $_SESSION['cart'];
-	 if (!isset($cart)) {
-		 return __('You have no items in your shopping cart');
-	 	} 
-	else {
-		$count = 0;
-		$table = '<table id="cartlist">
-					<thead>
-						<tr>
-							<th>'.__('Item Name').'</th>
-							<th>'.__('Notes').'</th>
-							<th>'.__('Amount').'</th>
-							<th>'.__('Total').'</th>	
-							<th>'.__('update').'</th>
-						</tr>
-					</thead> 
-					<tbody>';
-		foreach($cart as $items => $value){
-			$itemname = getItemName( $items);
-			foreach($value as $item){
-				$table .= '<tr><td>'.$itemname.'</td>';
-				$table .= '<td>'.$item[1].'</td>';
-				$table .= '<td>'.$item[0].'</td>';
-				$table .= '<td>'.getItemTotal($items, $item[0]).'</td>';
-				$table .= '<td>'.'nothing for now'.'</td></tr>';				
-				
-	 		}
-		 $table .= "</tbody></table>";
-		 }}
-		 
-		 return $table;
+	foreach($cart as $line)
+			echo $line;
+			
+		$string = '<tr class="total">';
+		$string .= '<td>'.__('Total:').'</td>';
+		$string .= '<td>'.howManyItemsDoIHave(TRUE).'</td>';
+		$string .= '<td></td>';
+		$string .= '<td></td>';
+		$string .= '<td>'.number_format(getCartValue(), 2, '.', '').'</td>';
+		$string .= '<td></td></tr>';
+		echo $string;			
 	
 }
+
+function getCartValue(){
+	$cart = $_SESSION['cart'];
+	$count = 0.00;
+	foreach($cart as $line)
+			$count += $line->getLineValue();
+			
+	return $count;
+}
+
 
 function getItemName($iid){
 	return "this is an item- - " . $iid;
@@ -114,3 +100,51 @@ function getItemTotal($iid, $amount){
 	
 }
 
+
+class Line{
+	
+	var $lineId;
+	var $itemId;
+	var $itemName;
+	var $qtty;
+	var $price;
+	var $itemCode;
+	var $remarks;
+	
+	
+	public function addNewLine( $lineId,  $itemId,  $itemName, $qtty, $price, $itemCode, $remarks){
+		$this->lineId = $lineId;
+		$this->itemId = $itemId;
+		$this->itemName = $itemName;
+		$this->qtty = $qtty;
+		$this->price = $price;
+		$this->itemCode = $itemCode;
+		$this->remarks = $remarks;
+		
+	}
+	
+	public function getLineValue(){
+		return (double)($this->qtty * $this->price);
+		
+	}
+	
+	public function __toString(){		
+	
+		$string = '<tr>';
+		$string .= '<td>'.$this->itemName.'</td>';
+		$string .= '<td>'.$this->qtty.'</td>';
+		$string .= '<td>'.$this->remarks.'</td>';
+		$string .= '<td>'.$this->price.'</td>';
+		$string .= '<td>'.number_format($this->getLineValue(), 2, '.', '').'</td>';
+		$string .= '<td><a href="'.HOME.'removeitem/'.$this->lineId.'" title="'.__('Remove Item').'">'.__('Remove').'</a></td></tr>';
+		
+		return $string;		
+		
+	}
+	
+}
+
+
+	
+
+	

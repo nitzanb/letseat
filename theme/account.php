@@ -46,8 +46,9 @@ if(isset($_POST['sublogin'])){
 				<div id="additemnav">
 			<ul>
 				<li><a href="" title=""><?_e('Orders history');?></a></li>
-				<li><a href="" title=""><?_e('Add Address');?></a></li>
-				<li><a href="" title=""><?_e('Edit details');?></a></li>
+				<li><a href="<?=HOME;?>addadress" title=""><?_e('Add Address');?></a></li>
+				<li><a href="<?=HOME;?>profile" title=""><?_e('Edit details');?></a></li>
+				<li><a href="<?=HOME;?>mycart" title=""><?_e('My Cart');?></a></li>
 			
 			</ul>
 		</div>

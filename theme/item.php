@@ -13,6 +13,8 @@ else
 	
 $item = new Item();
 $item->populatItem($iid);
+
+
 ?>
 
 <div id="wrap">
@@ -33,7 +35,7 @@ $item->populatItem($iid);
 			<img class="itemimage" src='<?php echo HOME.'images/items/'.$item->image ;?>' alt = "<?php echo $item->itemname;?>" />
 			<div class = "item_info">
 			<h3><?=$item->itemname;?></h3>
-		<form id="add_item_to_Cart" class="appnitro" enctype="multipart/form-data" method="post" action="'.HOME.'menu'.'">
+		<form id="add_item_to_Cart" class="appnitro" enctype="multipart/form-data" method="post" action="<?=HOME.'menu';?>">
 			<ul>
 			<?php 
 				/*
@@ -53,7 +55,7 @@ $item->populatItem($iid);
 						
 						<?php  if(isset($item->prices) && $item->prices != "0.00"):?>
 							<tr>
-								<td><input id="itemPrice_s" name="itemsettings_4" class="element checkbox" type="radio" value="1" /></td>
+								<td><input id="itemPrice_s" name="price_group" class="element checkbox" type="radio" value="S" checked /></td>
 								
 								<td  class="desc"><? ($item->itemtype != 1) ?  _e('Small') :  _e('330cc Can');?></td>
 								<td  class="price"><?=$item->prices. " " . $sitemap['currency'];?></td>
@@ -61,14 +63,14 @@ $item->populatItem($iid);
 						<?php endif;?> 
 						<?php  if(isset($item->pricem) && $item->pricem != "0.00"):?>
 							<tr>
-								<td><input id="itemPrice_m" name="itemsettings_4" class="element checkbox" type="radio" value="1" /></td>
+								<td><input id="itemPrice_m" name="price_group" class="element checkbox" type="radio" value="M" /></td>
 								<td class="desc"><?($item->itemtype != 1) ? _e('Medium') : _e('500cc Bottle');?></td>
 								<td class="price"><?=$item->pricem . " " . $sitemap['currency'] ;?></td>
 							</tr>
 						<?php endif;?> 
 						<?php  if(isset($item->pricel) && $item->pricel != "0.00"):?>
 							<tr>
-								<td><input id="itemPrice_l" name="itemsettings_4" class="element checkbox" type="radio" value="1" /></td>
+								<td><input id="itemPrice_l" name="price_group" class="element checkbox" type="radio" value="L" /></td>
 								<td class="desc"><?($item->itemtype != 1) ? _e('Large') : _e('1.5L Bottle');?></td>
 								<td class="price"><?=$item->pricel . " " . $sitemap['currency'] ;?></td>
 							</tr>
@@ -77,14 +79,18 @@ $item->populatItem($iid);
 				
 				</li>
 				<li id="quantity">
-					<label class="description" for="pricel"><?_e('Quantitiy');?> </label>
+					<label class="description" for="qtty"><?_e('Quantitiy');?> </label>
 					<input id="qtty" name="qtty" class="element text small" type="text" maxlength="255" value="1"/> 
 				</li>
-				
+				<li id="usernotes">
+					<label class="description" for="remarks"><?_e('Remarks');?> </label>
+					<input id="remarks" name="remarks" class="element text large" type="text" maxlength="255" value=""/> 
+				</li>
 				
 				<li id="submition">
-				
-				
+				<input type="hidden" name="item_code" value="<?=$item->itemcode;?>">
+				<input type="hidden" name="item_id" value="<?=$item->itemid;?>">
+				<input type="hidden" name="form_submit" value="3123123">
 				<input id="saveForm" class="button_text" type="submit" name="submit" value="<?_e('Submit');?>" />
 				</li>
 			
