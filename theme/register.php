@@ -36,7 +36,7 @@ $err = '';
 					$phone = $_POST['phone'];
 					$mail = $_POST['email'];
 					
-					if($pass!=$pass2 || ){
+					if($pass!=$pass2 ){
 						$err .=  __('Something went wrong with your Passwords, Please recheck')."<br>";
 						$fatal = TRUE;	
 					}

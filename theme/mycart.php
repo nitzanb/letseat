@@ -24,7 +24,7 @@
 		<div id="formblock">
 			<h2><?_e('My Cart');?></h2>
 			<div id="content">
-				
+				<?php if(isUser()):?>
 				<table id="myCart">
 					<thead>
 					<tr>
@@ -46,6 +46,15 @@
 					<a href="<?=HOME.'checkout';?>" title="<?_e('CheckOut')?>"><img src="<?=HOME;?>images/checkout.png" alt="chekout button"></a>
 				
 				</div>
+				
+				<?php else : ?>
+				
+				<div id="Note">
+					
+					<?_e('Only registered users can order');?>
+				
+				</div>
+				<?php endif;?>
 			</div>
 		</div>
 		

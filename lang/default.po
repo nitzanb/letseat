@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Burgeranch\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-11 13:44+0200\n"
+"POT-Creation-Date: 2010-09-11 17:42+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Nitzan Brumer <nitzanb@gmail.com>\n"
 "Language-Team: NyV <nitzanb@gmail.com>\n"
@@ -20,35 +20,27 @@ msgstr ""
 msgid "$"
 msgstr "₪"
 
-#: /home/nitzan/www/letseat/functions/cart.php:26
-#: /home/nitzan/www/letseat/functions/cart.php:66
+#: /home/nitzan/www/letseat/functions/cart.php:27
 msgid "You have no items in your shopping cart"
 msgstr "אין פריטים בהזמנה"
 
-#: /home/nitzan/www/letseat/functions/cart.php:34
+#: /home/nitzan/www/letseat/functions/cart.php:38
 #, php-format
 msgid "You have %s items in your shopping cart"
 msgstr "יש %s פריטים בהזמנה"
 
-#: /home/nitzan/www/letseat/functions/cart.php:73
-msgid "Item Name"
-msgstr "שם הפריט"
-
 #: /home/nitzan/www/letseat/functions/cart.php:74
-msgid "Notes"
-msgstr "הערות"
-
-#: /home/nitzan/www/letseat/functions/cart.php:75
-msgid "Amount"
-msgstr "כמות"
-
-#: /home/nitzan/www/letseat/functions/cart.php:76
-msgid "Total"
+msgid "Total:"
 msgstr "סה\"כ"
 
-#: /home/nitzan/www/letseat/functions/cart.php:77
-msgid "update"
-msgstr "עדכון"
+#: /home/nitzan/www/letseat/functions/cart.php:141
+msgid "Remove Item"
+msgstr "הסר פריט"
+
+#: /home/nitzan/www/letseat/functions/cart.php:141
+#: /home/nitzan/www/letseat/theme/mycart.php:36
+msgid "Remove"
+msgstr "הסר"
 
 #: /home/nitzan/www/letseat/functions/adresses.php:201
 #, php-format
@@ -64,76 +56,111 @@ msgid "Page title"
 msgstr "כותרת העמוד"
 
 #: /home/nitzan/www/letseat/theme/account.php:48
-#: /home/nitzan/www/letseat/theme/profile.php:16
+#: /home/nitzan/www/letseat/theme/mycart.php:15
 msgid "Orders history"
 msgstr "היסטוריית הזמנות"
 
 #: /home/nitzan/www/letseat/theme/account.php:49
-#: /home/nitzan/www/letseat/theme/profile.php:17
+#: /home/nitzan/www/letseat/theme/mycart.php:16
 msgid "Add Address"
 msgstr "הוספת כתובת"
 
 #: /home/nitzan/www/letseat/theme/account.php:50
+#: /home/nitzan/www/letseat/theme/mycart.php:17
 msgid "Edit details"
 msgstr "עריכת פרטים"
 
-#: /home/nitzan/www/letseat/theme/account.php:56
+#: /home/nitzan/www/letseat/theme/account.php:51
+#: /home/nitzan/www/letseat/theme/mycart.php:18
+#: /home/nitzan/www/letseat/theme/mycart.php:25
+msgid "My Cart"
+msgstr "ההזמנה שלי"
+
+#: /home/nitzan/www/letseat/theme/account.php:57
 msgid "Hello "
 msgstr "שלום"
 
-#: /home/nitzan/www/letseat/theme/account.php:57
+#: /home/nitzan/www/letseat/theme/account.php:58
 msgid "Logout"
 msgstr "התנתק"
 
-#: /home/nitzan/www/letseat/theme/account.php:67
+#: /home/nitzan/www/letseat/theme/account.php:68
 msgid "Username:"
 msgstr "שם משתמש:"
 
-#: /home/nitzan/www/letseat/theme/account.php:68
+#: /home/nitzan/www/letseat/theme/account.php:69
 msgid "Password:"
 msgstr "סיסמא:"
 
-#: /home/nitzan/www/letseat/theme/account.php:70
+#: /home/nitzan/www/letseat/theme/account.php:71
 msgid "Remember me next time &nbsp;&nbsp;&nbsp;&nbsp;"
 msgstr "זכור אותי בפעם הבאה &nbsp;&nbsp;&nbsp;&nbsp;"
 
-#: /home/nitzan/www/letseat/theme/account.php:73
+#: /home/nitzan/www/letseat/theme/account.php:74
 msgid "Forgot Password?"
 msgstr "שכחת סיסמא?"
 
-#: /home/nitzan/www/letseat/theme/account.php:74
+#: /home/nitzan/www/letseat/theme/account.php:75
 msgid "Sign-Up!"
 msgstr "הרשמה"
 
-#: /home/nitzan/www/letseat/theme/header.php:59
+#: /home/nitzan/www/letseat/theme/header.php:60
 msgid "Our happy Site"
 msgstr "בורגראנץ'"
 
-#: /home/nitzan/www/letseat/theme/header.php:60
+#: /home/nitzan/www/letseat/theme/header.php:61
 msgid "Our happy slogen"
 msgstr "כמו שאני אוהב"
+
+#: /home/nitzan/www/letseat/theme/mycart.php:31
+msgid "Item Name"
+msgstr "שם הפריט"
+
+#: /home/nitzan/www/letseat/theme/mycart.php:32
+msgid "Quantitiy"
+msgstr "כמויות"
+
+#: /home/nitzan/www/letseat/theme/mycart.php:33
+msgid "Remarks"
+msgstr "הערות"
+
+#: /home/nitzan/www/letseat/theme/mycart.php:34
+msgid "Unit Price"
+msgstr "מחיר יחידה"
+
+#: /home/nitzan/www/letseat/theme/mycart.php:35
+msgid "Price"
+msgstr "מחיר"
+
+#: /home/nitzan/www/letseat/theme/mycart.php:46
+msgid "CheckOut"
+msgstr "לקופה"
+
+#: /home/nitzan/www/letseat/theme/mycart.php:54
+msgid "Only registered users can order"
+msgstr "רק משתמשים רשומים יכולים לבצע הזמנה"
 
 #: /home/nitzan/www/letseat/theme/profile.php:18
 msgid "My Profile"
 msgstr "הפרופיל שלי"
 
-#: /home/nitzan/www/letseat/theme/profile.php:25
+#: /home/nitzan/www/letseat/theme/profile.php:26
 msgid "My info"
 msgstr "הפרטים שלי"
 
-#: /home/nitzan/www/letseat/theme/profile.php:30
+#: /home/nitzan/www/letseat/theme/profile.php:31
 msgid "Name:"
 msgstr "שם:"
 
-#: /home/nitzan/www/letseat/theme/profile.php:34
+#: /home/nitzan/www/letseat/theme/profile.php:35
 msgid "Mail:"
 msgstr "דואר אלקטרוני:"
 
-#: /home/nitzan/www/letseat/theme/profile.php:39
+#: /home/nitzan/www/letseat/theme/profile.php:40
 msgid "Your Addresses"
 msgstr "כתובת"
 
-#: /home/nitzan/www/letseat/theme/profile.php:48
+#: /home/nitzan/www/letseat/theme/profile.php:49
 msgid "You need to login in order to see your info"
 msgstr "רק משתמשים מחוברים יכולים לראות את הפרטים שלהם"
 
@@ -179,7 +206,7 @@ msgid "Meal"
 msgstr "ארוחות"
 
 #: /home/nitzan/www/letseat/theme/additem.php:79
-#: /home/nitzan/www/letseat/theme/menu.php:36
+#: /home/nitzan/www/letseat/theme/menu.php:66
 #: /home/nitzan/www/letseat/theme/item.php:24
 msgid "Combina"
 msgstr "קומבינה"
@@ -229,10 +256,6 @@ msgstr "קוד המוצר"
 msgid "Price - 330cc Can"
 msgstr "מחיר - פחות 330CC"
 
-#: /home/nitzan/www/letseat/theme/additem.php:131
-msgid "Price"
-msgstr "מחיר"
-
 #: /home/nitzan/www/letseat/theme/additem.php:133
 msgid "Price - Small"
 msgstr "מחיר - S"
@@ -262,68 +285,185 @@ msgstr "מרכיבים"
 msgid "Submit"
 msgstr "שליחה"
 
-#: /home/nitzan/www/letseat/theme/register.php:25
-msgid "Registration Form"
-msgstr "טופס הרשמה"
+#: /home/nitzan/www/letseat/theme/checkout.php:25
+msgid "Check Out"
+msgstr "הקופה"
 
-#: /home/nitzan/www/letseat/theme/register.php:38
-msgid "Passwords dont match"
-msgstr "הסיסמאות לא תואמות"
+#: /home/nitzan/www/letseat/theme/checkout.php:29
+msgid "Select Your Address"
+msgstr "בחר את הכתובת למשלוח"
 
-#: /home/nitzan/www/letseat/theme/register.php:48
-msgid "You are already loged in"
-msgstr "אתה כבר מחובר"
+#: /home/nitzan/www/letseat/theme/checkout.php:36
+msgid "Credit Card Type"
+msgstr "סוג כרטיס אשראי"
 
-#: /home/nitzan/www/letseat/theme/register.php:50
-msgid "Log Out"
-msgstr "התנתק "
+#: /home/nitzan/www/letseat/theme/checkout.php:38
+msgid "Visa"
+msgstr "ויזה"
 
-#: /home/nitzan/www/letseat/theme/register.php:60
-msgid "User Name"
-msgstr "שם משתמש: "
+#: /home/nitzan/www/letseat/theme/checkout.php:39
+msgid "MasterCard"
+msgstr "מאסטרכארד"
 
-#: /home/nitzan/www/letseat/theme/register.php:64
-msgid "Password"
-msgstr "סיסמא: "
+#: /home/nitzan/www/letseat/theme/checkout.php:40
+msgid "American Express"
+msgstr "אמריקן אקספרס"
 
-#: /home/nitzan/www/letseat/theme/register.php:68
-msgid "Password <small>again</small>"
-msgstr "סיסמא <small>שוב</small>"
+#: /home/nitzan/www/letseat/theme/checkout.php:41
+msgid "Diners"
+msgstr "דיינרס"
 
-#: /home/nitzan/www/letseat/theme/register.php:72
-msgid "Full Name"
-msgstr "שם מלא"
+#: /home/nitzan/www/letseat/theme/checkout.php:45
+msgid "Card Number"
+msgstr "מספר כרטיס אשראי"
 
-#: /home/nitzan/www/letseat/theme/register.php:76
-msgid "Phone Number"
-msgstr "מספר טלפון"
+#: /home/nitzan/www/letseat/theme/checkout.php:50
+msgid "Valid until"
+msgstr "תוקף"
 
-#: /home/nitzan/www/letseat/theme/register.php:80
-msgid "Email"
-msgstr "דואר אלקטרוני"
+#: /home/nitzan/www/letseat/theme/checkout.php:54
+msgid "Id Number"
+msgstr "תעודת זהות"
 
-#: /home/nitzan/www/letseat/theme/register.php:85
-#: /home/nitzan/www/letseat/theme/addadress.php:73
+#: /home/nitzan/www/letseat/theme/checkout.php:59
+#: /home/nitzan/www/letseat/theme/register.php:103
+#: /home/nitzan/www/letseat/theme/addadress.php:79
 msgid "Click ME"
 msgstr "לחץ עלי"
 
-#: /home/nitzan/www/letseat/theme/addadress.php:46
+#: /home/nitzan/www/letseat/theme/checkout.php:66
+msgid "You must enter your Card number"
+msgstr "חובה להזין מספר כרטיס אשראי"
+
+#: /home/nitzan/www/letseat/theme/checkout.php:67
+msgid "You must enter your Card Due Date in format MM/YY"
+msgstr "חובה להזין תוקף לכרטיס בפורמט MM/YY"
+
+#: /home/nitzan/www/letseat/theme/checkout.php:68
+msgid "You must enter your ID number"
+msgstr "חובה להקליד תעודת זהות"
+
+#: /home/nitzan/www/letseat/theme/checkout.php:69
+msgid "ID number shoud be numeric"
+msgstr "תעודת זהות יכולה להכיל מספרים בלבד"
+
+#: /home/nitzan/www/letseat/theme/checkout.php:70
+msgid "Card number number shoud be numeric"
+msgstr "כרטיס אשראי צריך להכיל ספרות בלבד"
+
+#: /home/nitzan/www/letseat/theme/register.php:26
+msgid "Registration Form"
+msgstr "טופס הרשמה"
+
+#: /home/nitzan/www/letseat/theme/register.php:40
+msgid "Something went wrong with your Passwords, Please recheck"
+msgstr "משהו לא תקין בסיסמא שהזנת, אנא בדוק שנית"
+
+#: /home/nitzan/www/letseat/theme/register.php:45
+msgid "A field was left blank"
+msgstr "חובה למלא את כל השדות"
+
+#: /home/nitzan/www/letseat/theme/register.php:50
+msgid "Problem With email Address"
+msgstr "יש בעיה עם כתובת הדואר האלקטרוני"
+
+#: /home/nitzan/www/letseat/theme/register.php:66
+msgid "You are already loged in"
+msgstr "אתה כבר מחובר"
+
+#: /home/nitzan/www/letseat/theme/register.php:68
+msgid "Log Out"
+msgstr "התנתק "
+
+#: /home/nitzan/www/letseat/theme/register.php:78
+msgid "User Name"
+msgstr "שם משתמש: "
+
+#: /home/nitzan/www/letseat/theme/register.php:82
+msgid "Password"
+msgstr "סיסמא: "
+
+#: /home/nitzan/www/letseat/theme/register.php:86
+msgid "Password <small>again</small>"
+msgstr "סיסמא <small>שוב</small>"
+
+#: /home/nitzan/www/letseat/theme/register.php:90
+msgid "Full Name"
+msgstr "שם מלא"
+
+#: /home/nitzan/www/letseat/theme/register.php:94
+msgid "Phone Number"
+msgstr "מספר טלפון"
+
+#: /home/nitzan/www/letseat/theme/register.php:98
+msgid "Email"
+msgstr "דואר אלקטרוני"
+
+#: /home/nitzan/www/letseat/theme/register.php:114
+msgid "The Password and verified password do not match!"
+msgstr "הסיסמאות אינן תואמות זו לזו"
+
+#: /home/nitzan/www/letseat/theme/register.php:127
+msgid "Only digits as phone number please"
+msgstr "טלפון צריך להכיל ספרות בלבד"
+
+#: /home/nitzan/www/letseat/theme/register.php:128
+msgid "You must enter your phone number"
+msgstr "חובה להזין מספר טלפון"
+
+#: /home/nitzan/www/letseat/theme/register.php:129
+msgid "Phone number can not be longer than 10 digits"
+msgstr "מספר טלפון לא יכול להיות בן יותר מ 10 ספרות"
+
+#: /home/nitzan/www/letseat/theme/register.php:130
+msgid "Phone number can not be Shorter than 8 digits"
+msgstr "מספר טלפון לא יכול להיות קצר מ 8 ספרות"
+
+#: /home/nitzan/www/letseat/theme/register.php:133
+msgid "A valid Email address is required"
+msgstr "חובה להזין כתובת דואר אלקטרוני תקינה"
+
+#: /home/nitzan/www/letseat/theme/register.php:136
+msgid "Please retype the password"
+msgstr "חובה לאמת את הסיסמא"
+
+#: /home/nitzan/www/letseat/theme/register.php:137
+msgid "Please type a password"
+msgstr "חובה להקליד סיסמא"
+
+#: /home/nitzan/www/letseat/theme/register.php:140
+msgid "You must select a user name"
+msgstr "יש לבחור שם משתמש"
+
+#: /home/nitzan/www/letseat/theme/register.php:141
+msgid "User name must contains alphanumeric values please"
+msgstr "שם משתמש יכול להכיל רק תווים אלפנומריים"
+
+#: /home/nitzan/www/letseat/theme/register.php:143
+msgid "full name must contains alphanumeric values please"
+msgstr "שם יכול להכיל רק אותיות ורווחים"
+
+#: /home/nitzan/www/letseat/theme/addadress.php:32
+msgid "You did something wrong"
+msgstr "בוודאי עשית משהו לא בסדר"
+
+#: /home/nitzan/www/letseat/theme/addadress.php:52
 msgid "Adding Addresses"
 msgstr "הוספת כתובת"
 
-#: /home/nitzan/www/letseat/theme/addadress.php:50
+#: /home/nitzan/www/letseat/theme/addadress.php:56
 msgid "Select a City"
 msgstr "בחר עיר"
 
-#: /home/nitzan/www/letseat/theme/addadress.php:56
+#: /home/nitzan/www/letseat/theme/addadress.php:62
 msgid "Select a Street"
 msgstr "בחר רחוב"
 
-#: /home/nitzan/www/letseat/theme/addadress.php:63
+#: /home/nitzan/www/letseat/theme/addadress.php:69
 msgid "Home Number"
 msgstr "מספר בית"
 
-#: /home/nitzan/www/letseat/theme/addadress.php:67
+#: /home/nitzan/www/letseat/theme/addadress.php:73
 msgid "Floor"
 msgstr "קומה"
 
@@ -347,27 +487,32 @@ msgstr "הוספת פריט"
 msgid "Add New Page"
 msgstr "הוספת עמוד "
 
-#: /home/nitzan/www/letseat/theme/menu.php:37
+#: /home/nitzan/www/letseat/theme/menu.php:54
+#, php-format
+msgid "Added %s to the cart (Quantity: %s)"
+msgstr "הוספתי %s להזמנה (כמות: %s)"
+
+#: /home/nitzan/www/letseat/theme/menu.php:67
 #: /home/nitzan/www/letseat/theme/item.php:25
 msgid "Meals"
 msgstr "ארוחות"
 
-#: /home/nitzan/www/letseat/theme/menu.php:38
+#: /home/nitzan/www/letseat/theme/menu.php:68
 #: /home/nitzan/www/letseat/theme/item.php:26
 msgid "Main Dishes"
 msgstr "מנות עיקריות"
 
-#: /home/nitzan/www/letseat/theme/menu.php:39
+#: /home/nitzan/www/letseat/theme/menu.php:69
 #: /home/nitzan/www/letseat/theme/item.php:27
 msgid "Drinks"
 msgstr "שתיה"
 
-#: /home/nitzan/www/letseat/theme/menu.php:40
+#: /home/nitzan/www/letseat/theme/menu.php:70
 #: /home/nitzan/www/letseat/theme/item.php:28
 msgid "Extras"
 msgstr "תוספות"
 
-#: /home/nitzan/www/letseat/theme/menu.php:41
+#: /home/nitzan/www/letseat/theme/menu.php:71
 #: /home/nitzan/www/letseat/theme/item.php:29
 msgid "Deserts"
 msgstr "קינוחים"
@@ -399,14 +544,6 @@ msgstr "גדול"
 #: /home/nitzan/www/letseat/theme/item.php:74
 msgid "1.5L Bottle"
 msgstr "בקבוק 1.5 ליטר"
-
-#: /home/nitzan/www/letseat/theme/item.php:82
-msgid "Quantitiy"
-msgstr "כמויות"
-
-#: /home/nitzan/www/letseat/theme/item.php:86
-msgid "Remarks"
-msgstr "הערות"
 
 #: /home/nitzan/www/letseat/classes/Item.php:52
 msgid "This Item code is already listed"
@@ -511,6 +648,14 @@ msgstr "העמוד הוסף בהצלחה"
 msgid "Sorry, Page not Found"
 msgstr "מצטערים, העמוד לא נמצא"
 
+#~ msgid "Notes"
+#~ msgstr "הערות"
+#~ msgid "Amount"
+#~ msgstr "כמות"
+#~ msgid "update"
+#~ msgstr "עדכון"
+#~ msgid "Passwords dont match"
+#~ msgstr "הסיסמאות לא תואמות"
 #~ msgid "Manage Items"
 #~ msgstr "ניהול פריטים"
 #~ msgid ""
