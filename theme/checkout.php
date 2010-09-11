@@ -5,6 +5,25 @@
  *      Copyright 2010 nitzan <nitzan@nitzan-laptop>
  *      
  */
+
+
+
+if ($_POST['form_submit']== "11234"):
+
+$address = $_POST['address'];
+$cardType =  $_POST['cardType'];
+$cardnumber = $_POST['cardnumber'];
+$duedate = $_POST['duedate'];
+$ownerId = $_POST['ownerId'];
+
+$recite =  processOrder($address, $cardType, $cardnumber, $duedate, $ownerId );
+
+
+endif;
+
+
+
+
 	get_top_nav(); //Call the navigation
 ?>
 
@@ -24,7 +43,7 @@
 		<div id="formblock">
 			<h2><?_e('Check Out');?></h2>
 			<div id="content">
-				<form id="checkoutform" method="POST" name="order_form">
+				<form id="checkoutform" method="POST" name="order_form" action="<?=HOME;?>recite">
 					<p>						
 						<label for="address"><?_e('Select Your Address');?></label>
 						<select id="address" name = "address" >

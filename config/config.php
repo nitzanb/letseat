@@ -12,7 +12,7 @@ define('DB_HOST', '');    //Db server
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', 'utf8');
 define ('LANG', 'he_IL');  //For localization and translation
-define('HOME', 'http://br.twodiv.com/');//'http://bur.geran.ch/');
+define('HOME', 'http://br.twodiv.com/');//'');
 define ('ADMIN_LEVEL', '9');
 define('USER_LEVEL','1');
 define('SECRET','askldj08asd98asd2013h82650f58j23498'); //This is used to Hash the Passwords

@@ -77,3 +77,13 @@ small{font-size:11px;}
 #chekoutbtn{ text-align:left;margin-top:50px;}
 
 #notice {border:2px dotted ;padding:5px;text-align:center;}
+
+
+/* the recite style */
+
+
+#recite {border:1px solid black; padding:10px; }
+#recite .date {text-align:left; }
+#recite .slogen, #recite .anounce  {text-align:center; margin:10px 0;}
+#recitebody table {width:290px; margin:0 auto; margin-bottom:20px;}
+#reciteFooter {text-align:center;}
