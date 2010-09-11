@@ -4,7 +4,7 @@
  *      
  *      Copyright 2010 Nitzan Brumer <nitzan@taz>
  */
-
+	get_top_nav(); //Call the navigation
 ?>
 
 

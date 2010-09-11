@@ -33,7 +33,7 @@ if(isset($_GET['pid'])){
 	$oldcontent = $page->content;
 }
 
-
+	get_top_nav(); //Call the navigation
 ?>
 
 <div id="wrap">

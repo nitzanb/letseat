@@ -26,6 +26,36 @@ if(isset($sitemap['action']))
 else
 	$type = 3;
 	$items = getItemsByType($type);
+	
+$notice = "";
+if(isset($_POST['form_submit']) && $_POST['form_submit'] == '3123123' ):
+	$remarks = $_POST['remarks'];
+	$iid = $_POST['item_id'];	
+	$item = new Item();
+	$item->populatItem($iid);
+				
+	$qtty = abs($_POST['qtty']);
+	$size = $_POST['price_group'];
+	
+	
+	switch ($size){
+		case 'S': 
+			$price = $item->prices;
+			break;
+		case 'M': 
+			$price = $item->pricem;
+			break;
+		case 'L': 
+			$price = $item->pricel;					
+	}
+	
+	addToCart($iid,  $item->itemname, $qtty, $price, $item->itemCode, $remarks);
+	
+	$notice = sprintf(__('Added %s to the cart (Quantity: %s)'), $item->itemname , $qtty);
+
+endif;	
+			
+	get_top_nav(); //Call the navigation	
 ?>
 
 
@@ -45,37 +75,7 @@ else
 		<div id="menuitemlist">
 		
 		<div id="notice">
-		<?php
-			if(isset($_POST['form_submit']) && $_POST['form_submit'] == '3123123' ):
-				$remarks = $_POST['remarks'];
-				$iid = $_POST['item_id'];	
-				$item = new Item();
-				$item->populatItem($iid);
-							
-				$qtty = $_POST['qtty'];
-				$size = $_POST['price_group'];
-				
-				
-				switch ($size){
-					case 'S': 
-						$price = $item->prices;
-						break;
-					case 'M': 
-						$price = $item->pricem;
-						break;
-					case 'L': 
-						$price = $item->pricel;					
-				}
-				
-				addToCart($iid,  $item->itemname, $qtty, $price, $item->itemCode, $remarks);
-				
-				echo sprintf(__('Added %s to the cart (Quantity: %s)'), $item->itemname , $qtty);
-			
-			endif;
-		
-		
-		
-		?>
+			<?=$notice;?>
 		</div>
 		<?
 		

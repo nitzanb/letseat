@@ -49,6 +49,7 @@ global $sitemap;
 		<script src="http://yui.yahooapis.com/2.8.1/build/editor/editor-min.js"></script>
 		<?php }?>		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script src="js/gen_validatorv31.js"></script>
 		
 </head>
 

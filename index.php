@@ -55,7 +55,7 @@ if ($sitemap['action'] =='logout'){
 		session_start();
 	}
 	get_header(); //Call the header
-	get_top_nav(); //Call the navigation
+
 	
 	
 	

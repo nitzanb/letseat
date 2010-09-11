@@ -2,7 +2,7 @@
 /*
  *      tests.php
  **/      
-
+	get_top_nav(); //Call the navigation
 ?>
 
 <div id="wrap">

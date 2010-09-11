@@ -79,7 +79,7 @@ $itemTypeName = array(	'1'=> __('Drink'),
 						'6'=> __('Combina'));
 
 
-
+	get_top_nav(); //Call the navigation
 ?>
 
 <div id="wrap">

@@ -14,7 +14,7 @@ else
 $item = new Item();
 $item->populatItem($iid);
 
-
+	get_top_nav(); //Call the navigation
 ?>
 
 <div id="wrap">

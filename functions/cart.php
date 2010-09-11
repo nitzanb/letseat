@@ -66,7 +66,7 @@ function removeFromCart($lineId){
 }
 
 function printCartLines(){
-	$cart = $_SESSION['cart'];
+	$cart = $_SESSION['cart'];if (isset($cart)){
 	foreach($cart as $line)
 			echo $line;
 			
@@ -78,16 +78,18 @@ function printCartLines(){
 		$string .= '<td>'.number_format(getCartValue(), 2, '.', '').'</td>';
 		$string .= '<td></td></tr>';
 		echo $string;			
-	
+	}
 }
 
 function getCartValue(){
 	$cart = $_SESSION['cart'];
+	if (isset($cart)){
 	$count = 0.00;
 	foreach($cart as $line)
 			$count += $line->getLineValue();
 			
 	return $count;
+}
 }
 
 

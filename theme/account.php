@@ -30,7 +30,7 @@ if(isset($_POST['sublogin'])){
 	}
 }
 
-
+	get_top_nav(); //Call the navigation
 ?>
 
 <div id="wrap">

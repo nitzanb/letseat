@@ -15,7 +15,7 @@ else
 $page = new Page();
 $page->getPageBySlug($slug);
 
-
+	get_top_nav(); //Call the navigation
 ?>
 
 <div id="wrap">

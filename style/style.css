@@ -75,3 +75,5 @@ small{font-size:11px;}
 
 #myCart td, #myCart th{padding:5px 10px; text-align:center; }
 #chekoutbtn{ text-align:left;margin-top:50px;}
+
+#notice {border:2px dotted ;padding:5px;text-align:center;}

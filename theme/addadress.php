@@ -26,9 +26,13 @@ if(isset($_POST['form_submit']) && $_POST['form_submit']=="11234"):
 	$hn = $_POST['homenumber'];
 	$fn = $_POST['floor'];
 	$uid = logedUid();
-	addAddress($uid, $cid, $sid, $hn, $fn);
-
+	if(is_numeric($cid) && is_numeric($sid) && is_numeric($hn) && is_numeric($fn) && is_numeric($uid))
+		addAddress($uid, $cid, $sid, $hn, $fn);
+	else
+		$notice = __('You did something wrong');
 endif;
+
+	get_top_nav(); //Call the navigation
 ?>
 
 
@@ -44,9 +48,10 @@ endif;
 			</ul>
 		</div>
 		<div id="formblock">
+		<div id="notice"><?=$notice;?></div>
 			<h2><?_e('Adding Addresses');?></h2>
 			<div id="content">
-				<form id="addnewaddress" method="POST" >
+				<form id="addnewaddress" method="POST" name="add_address">
 				<p>
 					<label for="cityselect"><?_e('Select a City');?></label>
 					<select id="cityselect" name = "cityselect" class = "cselect">
@@ -75,6 +80,8 @@ endif;
 				
 				</p>
 				</form>
+				
+				  
 			<script type="text/javascript">
 			$('.cselect').change(function() {
 			 $.get('ajax/gst.php?cid='+$('.cselect :selected').val(), function(data) {
@@ -84,6 +91,8 @@ endif;
 				 
 				});
 			});
+			
+				  
 
 		</script>
 			</div>
